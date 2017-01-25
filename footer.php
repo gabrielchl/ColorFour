@@ -7,29 +7,27 @@
  * @package _tk
  */
 ?>
-			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-		</div><!-- close .row -->
-	</div><!-- close .container -->
-</div><!-- close .main-content -->
-
-<footer id="colophon" class="site-footer" role="contentinfo">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<style>
+    </div>
+    <!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
+    </div>
+    <!-- close .row -->
+    </div>
+    <!-- close .container -->
+    </div>
+    <!-- close .main-content -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <?php // substitute the class "container-fluid" below if you want a wider content area ?>
+            <style>
                 .footerfourbox {
                     padding-top: 40px;
                     padding-bottom: 40px;
                 }
             </style>
-
-
             <div class="row" style="background-color:#666;">
                 <div class="container" id="getthisheiht">
                     <div class="container" style="color:#fff;">
                         <div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;"><img src="<?php bloginfo('stylesheet_directory');
-                                ?>/awanalogowhite.png" style="padding-bottom: 15px;
-    width: 100%;
-    height: auto;
-    max-width: 200px;" />
+                                ?>/awanalogowhite.png" style="padding-bottom: 15px; width: 100%; height: auto; max-width: 200px;" />
                             <br>
                             <?php dynamic_sidebar( 'widget_footer_one' ); ?>
                         </div>
@@ -52,15 +50,13 @@
                 </div>
             </div>
             <div class="row" style="background-color:#444;">
-                <div class="container" id="getthisheiht">
-                    <div class="container">
-                        <span style="line-height:60px; color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span>
-                    </div>
+                <div class="container" id="getthisheiht" style="padding-bottom:0;">
+                    <div class="container" style="padding-bottom:0;"> <span style="line-height:60px; color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span> </div>
                 </div>
             </div>
-</footer><!-- close #colophon -->
+    </footer>
+    <!-- close #colophon -->
+    <?php wp_footer(); ?>
+        </body>
 
-<?php wp_footer(); ?>
-
-</body>
-</html>
+        </html>

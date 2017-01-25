@@ -234,3 +234,59 @@ function awana_logo_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'awana_logo_setup' );
+
+function widget_footer_one() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Area One',
+		'id'            => 'widget_footer_one',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h4 style="padding-bottom:15px; margin-bottom:0">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'widget_footer_one' );
+
+function widget_footer_two() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Area Two',
+		'id'            => 'widget_footer_two',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h4 style="padding-bottom:15px; margin-bottom:0">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'widget_footer_two' );
+
+function widget_footer_three() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Area Three',
+		'id'            => 'widget_footer_three',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h4 style="padding-bottom:15px; margin-bottom:0">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'widget_footer_three' );
+
+function widget_footer_four() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Area Four',
+		'id'            => 'widget_footer_four',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h4 style="padding-bottom:15px; margin-bottom:0">',
+		'after_title'   => '</h4>',
+	) );
+
+}
+add_action( 'widgets_init', 'widget_footer_four' );
