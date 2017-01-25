@@ -4,7 +4,7 @@ $main_nav_options = array(
   'depth'             => 2,
   'container'         => '',
   'container_class'   => '',
-  'menu_class'        => 'nav navbar-nav',
+  'menu_class'        => 'nav navbar-nav navbar-right',
   'fallback_cb'       => 'bootstrap_four_wp_navwalker::fallback',
   'walker'            => new bootstrap_four_wp_navwalker()
 );
@@ -13,7 +13,12 @@ $main_nav_options = array(
 <?php if ( has_nav_menu( 'main_menu' ) ) : ?>
   <nav class="navbar navbar-light bg-faded">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <?php bloginfo( 'name' ); ?>
+          <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+echo $image[0]; ?>
+        </a>
       <?php wp_nav_menu( $main_nav_options ); ?>
       
     </div><!-- .container -->

@@ -1,5 +1,6 @@
 <?php
-if ( is_single() || is_page() || is_front_page() == False ) :
+/*
+if ( is_single() || is_page() ) :
   echo '<div class="clearfix"></div>';
   if ( have_comments() && comments_open() ) : ?>
     <h4 id="comments"><?php comments_number( __( 'Leave a Comment', 'bootstrap-four' ), __( 'One Comment', 'bootstrap-four' ), '%' . __( ' Comments', 'bootstrap-four' ) );?></h4>
@@ -15,5 +16,5 @@ if ( is_single() || is_page() || is_front_page() == False ) :
       comment_form();
     endif;
   endif;
-endif;
+endif; */
 ?>
