@@ -14,20 +14,50 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-sm-12">
+	<style>
+                .footerfourbox {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+            </style>
 
-				<div class="site-info">
-					<?php do_action( '_tk_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_tk' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', '_tk' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-                    <a class="credits" href="http://themekraft.com/" target="_blank" title="Themes and Plugins developed by Themekraft" alt="Themes and Plugins developed by Themekraft"><?php _e('Themes and Plugins developed by Themekraft.','_tk') ?> </a>
-				</div><!-- close .site-info -->
 
-			</div>
-		</div>
-	</div><!-- close .container -->
+            <div class="row" style="background-color:#666;">
+                <div class="container" id="getthisheiht">
+                    <div class="container" style="color:#fff;">
+                        <div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;"><img src="<?php bloginfo('stylesheet_directory');
+                                ?>/awanalogowhite.png" style="padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;" />
+                            <br>
+                            <?php dynamic_sidebar( 'widget_footer_one' ); ?>
+                        </div>
+                        <div class="col-md-3 footerfourbox" style="background-color: #80C3D3; border-bottom: #547f8a 10px solid;">
+                            <?php dynamic_sidebar( 'widget_footer_two' ); ?>
+                        </div>
+                        <div class="col-md-3 footerfourbox" style="background-color: #88C87A; border-bottom: #5f8c56 10px solid;">
+                            <?php dynamic_sidebar( 'widget_footer_three' ); ?>
+                        </div>
+                        <div class="col-md-3 footerfourbox" style="background-color: #F1CD3B; border-bottom: #b3982a 10px solid;">
+                            <style>
+                                .footerfourbox ul {
+                                    list-style-type: none;
+                                    padding-left: 0px;
+                                }
+                            </style>
+                            <?php dynamic_sidebar( 'widget_footer_four' ); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color:#444;">
+                <div class="container" id="getthisheiht">
+                    <div class="container">
+                        <span style="line-height:60px; color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span>
+                    </div>
+                </div>
+            </div>
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>

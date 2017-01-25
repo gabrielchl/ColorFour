@@ -50,7 +50,7 @@
 
 <nav class="site-navigation">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
+	<div class="container" style="padding-bottom:0;">
 		<div class="row">
 			<div class="site-navigation-inner col-sm-12">
 				<div class="navbar navbar-default" style="background-color:#fff; border:none; margin-bottom:0;">
