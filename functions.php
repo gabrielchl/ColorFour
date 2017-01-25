@@ -225,3 +225,12 @@ function add_awana_so_widgets($folders){
     return $folders;
 }
 add_filter('siteorigin_widgets_widget_folders', 'add_awana_so_widgets');
+
+function awana_logo_setup() {
+	add_theme_support( 'custom-logo', array(
+		'height'      => 63,
+		'width'       => 210,
+		'flex-width' => true,
+	) );
+}
+add_action( 'after_setup_theme', 'awana_logo_setup' );
