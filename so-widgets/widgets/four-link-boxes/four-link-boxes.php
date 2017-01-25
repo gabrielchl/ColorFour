@@ -3,7 +3,6 @@
 Widget Name: Four Link Boxes
 Description: Four Link Boxes, specially designed for home page.
 Author: Gabriel Chi Hong Lee
-Author URI: 
 */
 
 class Four_Link_Boxes extends SiteOrigin_Widget {

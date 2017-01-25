@@ -597,7 +597,7 @@ function WP_Theme_for_AwanaHK_register_required_plugins() {
 }
 
 function add_awana_so_widgets($folders){
-    $folders[] = 'so-widgets';
+    $folders[] = '/so-widgets';
     return $folders;
 }
 add_filter('siteorigin_widgets_widget_folders', 'add_awana_so_widgets');
