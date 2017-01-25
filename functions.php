@@ -1,184 +1,171 @@
 <?php
+/**
+ * _tk functions and definitions
+ *
+ * @package _tk
+ */
+ 
+ /**
+  * Store the theme's directory path and uri in constants
+  */
+ define('THEME_DIR_PATH', get_template_directory());
+ define('THEME_DIR_URI', get_template_directory_uri());
 
-include_once 'lib/bootstrap-four-wp-navwalker.php';
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 750; /* pixels */
 
-global $bootstrap_four_version;
+if ( ! function_exists( '_tk_setup' ) ) :
+/**
+ * Set up theme defaults and register support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which runs
+ * before the init hook. The init hook is too late for some features, such as indicating
+ * support post thumbnails.
+ */
+function _tk_setup() {
+	global $cap, $content_width;
 
-$bootstrap_four_version = '4.0.0';
+	// Add html5 behavior for some theme elements
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
-// Le sigh...
-if ( ! isset( $content_width ) ) $content_width = 837;
+    // This theme styles the visual editor with editor-style.css to match the theme style.
+	add_editor_style();
 
+	/**
+	 * Add default posts and comments RSS feed links to head
+	*/
+	add_theme_support( 'automatic-feed-links' );
 
-if ( ! function_exists( 'bootstrap_four_widgets_init' ) ) :
-  function bootstrap_four_widgets_init() {
-    register_sidebar( array(
-      'name' => __( 'Right Sidebar', 'bootstrap-four' ),
-      'id' => 'right-sidebar',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3>',
-      'after_title' => '</h3>',
-    ) );
-  }
-endif;
-add_action( 'widgets_init', 'bootstrap_four_widgets_init' );
+	/**
+	 * Enable support for Post Thumbnails on posts and pages
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	*/
+	add_theme_support( 'post-thumbnails' );
 
+	/**
+	 * Enable support for Post Formats
+	*/
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-if ( ! function_exists( 'bootstrap_four_setup' ) ) :
-  function bootstrap_four_setup() {
+	/**
+	 * Setup the WordPress core custom background feature.
+	*/
+	add_theme_support( 'custom-background', apply_filters( '_tk_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+		) ) );
+	
+	/**
+	 * Make theme available for translation
+	 * Translations can be filed in the /languages/ directory
+	 * If you're building a theme based on _tk, use a find and replace
+	 * to change '_tk' to the name of your theme in all the template files
+	*/
+	load_theme_textdomain( '_tk', THEME_DIR_PATH . '/languages' );
 
-    add_theme_support( 'custom-background', array(
-      'default-color' => 'ffffff',
-    ) );
+	/**
+	 * This theme uses wp_nav_menu() in one location.
+	*/
+	register_nav_menus( array(
+		'primary'  => __( 'Header bottom menu', '_tk' ),
+		) );
 
-    add_theme_support( 'automatic-feed-links' );
-
-    add_theme_support( 'title-tag' );
-
-    add_theme_support( 'html5', array(
-      'search-form',
-      'comment-form',
-      'comment-list',
-      'gallery',
-      'caption',
-    ) );
-
-    register_nav_menus( array(
-      'main_menu' => __( 'Main Menu', 'bootstrap-four' ),
-      // 'footer_menu' => 'Footer Menu'
-    ) );
-
-    add_editor_style( 'css/bootstrap.min.css' );
-  }
-endif; // bootstrap_four_setup
-add_action( 'after_setup_theme', 'bootstrap_four_setup' );
-
-
-if ( ! function_exists( 'bootstrap_four_theme_styles' ) ) :
-  function bootstrap_four_theme_styles() {
-    global $bootstrap_four_version;
-    wp_enqueue_style( 'bootstrap-four-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0' );
-    wp_register_style( 'bootstrap-four-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), $bootstrap_four_version );
-    wp_enqueue_style( 'bootstrap-four-styles', get_stylesheet_uri(), array( 'bootstrap-four-bootstrap' ), '1' );
-  }
-endif;
-add_action('wp_enqueue_scripts', 'bootstrap_four_theme_styles');
-
-
-if ( ! function_exists( 'bootstrap_four_theme_scripts' ) ) :
-  function bootstrap_four_theme_scripts() {
-    global $bootstrap_four_version;
-    wp_enqueue_script( 'bootstrap-four-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), $bootstrap_four_version, true );
-  }
-endif;
-add_action('wp_enqueue_scripts', 'bootstrap_four_theme_scripts');
-
-
-function bootstrap_four_nav_li_class( $classes, $item ) {
-  $classes[] .= ' nav-item';
-  return $classes;
 }
-add_filter( 'nav_menu_css_class', 'bootstrap_four_nav_li_class', 10, 2 );
+endif; // _tk_setup
+add_action( 'after_setup_theme', '_tk_setup' );
 
-
-function bootstrap_four_nav_anchor_class( $atts, $item, $args ) {
-  $atts['class'] .= ' nav-link';
-  return $atts;
+/**
+ * Register widgetized area and update sidebar with default widgets
+ */
+function _tk_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', '_tk' ),
+		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		) );
 }
-add_filter( 'nav_menu_link_attributes', 'bootstrap_four_nav_anchor_class', 10, 3 );
+add_action( 'widgets_init', '_tk_widgets_init' );
 
+/**
+ * Enqueue scripts and styles
+ */
+function _tk_scripts() {
 
-function bootstrap_four_comment_form_before() {
-  echo '<div class="card"><div class="card-block">';
+	// Import the necessary TK Bootstrap WP CSS additions
+	wp_enqueue_style( '_tk-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
+
+	// load bootstrap css
+	wp_enqueue_style( '_tk-bootstrap', THEME_DIR_URI . '/includes/resources/bootstrap/css/bootstrap.min.css' );
+
+	// load Font Awesome css
+	wp_enqueue_style( '_tk-font-awesome', THEME_DIR_URI . '/includes/css/font-awesome.min.css', false, '4.1.0' );
+
+	// load _tk styles
+	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
+
+	// load bootstrap js
+	wp_enqueue_script('_tk-bootstrapjs', THEME_DIR_URI . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
+
+	// load bootstrap wp js
+	wp_enqueue_script( '_tk-bootstrapwp', THEME_DIR_URI . '/includes/js/bootstrap-wp.js', array('jquery') );
+
+	wp_enqueue_script( '_tk-skip-link-focus-fix', THEME_DIR_URI . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_singular() && wp_attachment_is_image() ) {
+		wp_enqueue_script( '_tk-keyboard-image-navigation', THEME_DIR_URI . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+	}
+
 }
-add_action( 'comment_form_before', 'bootstrap_four_comment_form_before', 10, 5 );
+add_action( 'wp_enqueue_scripts', '_tk_scripts' );
 
+/**
+ * Implement the Custom Header feature.
+ */
+require THEME_DIR_PATH . '/includes/custom-header.php';
 
-function bootstrap_four_comment_form( $fields ) {
-  $fields['fields']['author'] = '
-  <fieldset class="form-group comment-form-email">
-    <label for="author">' . __( 'Name *', 'bootstrap-four' ) . '</label>
-    <input type="text" class="form-control" name="author" id="author" placeholder="' . __( 'Name', 'bootstrap-four' ) . '" aria-required="true" required>
-  </fieldset>';
-  $fields['fields']['email'] ='
-  <fieldset class="form-group comment-form-email">
-    <label for="email">' . __( 'Email address *', 'bootstrap-four' ) . 'Email address *</label>
-    <input type="email" class="form-control" id="email" placeholder="' . __( 'Enter email', 'bootstrap-four' ) . '" aria-required="true" required>
-    <small class="text-muted">' . __( 'Your email address will not be published.', 'bootstrap-four' ) . '</small>
-  </fieldset>';
-  $fields['fields']['url'] = '
-  <fieldset class="form-group comment-form-email">
-    <label for="url">' . __( 'Website *', 'bootstrap-four' ) . '</label>
-    <input type="text" class="form-control" name="url" id="url" placeholder="' . __( 'http://example.org', 'bootstrap-four' ) . '">
-  </fieldset>';
-  $fields['comment_field'] = '
-  <fieldset class="form-group">
-    <label for="comment">' . __( 'Comment *', 'bootstrap-four' ) . '</label>
-    <textarea class="form-control" id="comment" name="comment" rows="3" aria-required="true" required></textarea>
-  </fieldset>';
-  $fields['comment_notes_before'] = '';
-  $fields['class_submit'] = 'btn btn-primary';
-  return $fields;
+/**
+ * Custom template tags for this theme.
+ */
+require THEME_DIR_PATH . '/includes/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require THEME_DIR_PATH . '/includes/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require THEME_DIR_PATH . '/includes/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require THEME_DIR_PATH . '/includes/jetpack.php';
+
+/**
+ * Load custom WordPress nav walker.
+ */
+require THEME_DIR_PATH . '/includes/bootstrap-wp-navwalker.php';
+
+/**
+ * Adds WooCommerce support
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+	add_theme_support( 'woocommerce' );
 }
-add_filter( 'comment_form_defaults', 'bootstrap_four_comment_form', 10, 5 );
-
-
-function bootstrap_four_comment_form_after() {
-  echo '</div><!-- .card-block --></div><!-- .card -->';
-}
-add_action( 'comment_form_after', 'bootstrap_four_comment_form_after', 10, 5 );
-
-
-/* * * * * * * * * * * * * * *
- * BS4 Utility Functions
- * * * * * * * * * * * * * * */
-
-function bootstrap_four_get_posts_pagination( $args = '' ) {
-  global $wp_query;
-  $pagination = '';
-
-  if ( $GLOBALS['wp_query']->max_num_pages > 1 ) :
-
-    $defaults = array(
-      'total'     => isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1,
-      'current'   => get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1,
-      'type'      => 'array',
-      'prev_text' => '&laquo;',
-      'next_text' => '&raquo;',
-    );
-
-    $params = wp_parse_args( $args, $defaults );
-
-    $paginate = paginate_links( $params );
-
-    if( $paginate ) :
-      $pagination .= "<ul class='pagination'>";
-      foreach( $paginate as $page ) :
-        if( strpos( $page, 'current' ) ) :
-          $pagination .= "<li class='active'>$page</li>";
-        else :
-          $pagination .= "<li>$page</li>";
-        endif;
-      endforeach;
-      $pagination .= "</ul>";
-    endif;
-
-  endif;
-
-  return $pagination;
-}
-
-
-function bootstrap_four_the_posts_pagination( $args = '' ) {
-  echo bootstrap_four_get_posts_pagination( $args );
-}
-
-
-
-
-
-
 
 
 
@@ -190,11 +177,8 @@ require_once get_template_directory() . '/TGM-Plugin-Activation/class-tgm-plugin
 
 add_action( 'tgmpa_register', 'WP_Theme_for_AwanaHK_register_required_plugins' );
 
+
 function WP_Theme_for_AwanaHK_register_required_plugins() {
-	/*
-	 * Array of plugin arrays. Required keys are name and slug.
-	 * If the source is NOT from the .org repo, then source is also required.
-	 */
 	$plugins = array(
 
 		array(
@@ -241,12 +225,3 @@ function add_awana_so_widgets($folders){
     return $folders;
 }
 add_filter('siteorigin_widgets_widget_folders', 'add_awana_so_widgets');
-
-function awana_logo_setup() {
-	add_theme_support( 'custom-logo', array(
-		'height'      => 63,
-		'width'       => 210,
-		'flex-width' => true,
-	) );
-}
-add_action( 'after_setup_theme', 'awana_logo_setup' );
