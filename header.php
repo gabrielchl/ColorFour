@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
-
+<?php /*
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container">
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 	</div><!-- .container -->
-</header><!-- #masthead -->
+</header><!-- #masthead --> */ ?>
 
 <nav class="site-navigation">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
@@ -75,7 +75,7 @@
 							'container'         => 'nav',
 							'container_id'      => 'navbar-collapse',
 							'container_class'   => 'collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav',
+							'menu_class' 		=> 'nav navbar-nav navbar-right',
 							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
 							'menu_id'			=> 'main-menu',
 							'walker' 			=> new wp_bootstrap_navwalker()
@@ -92,5 +92,5 @@
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container">
 		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
+			<div id="content" class="main-content-inner col-sm-12">
 
