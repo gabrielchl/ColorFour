@@ -1,510 +1,179 @@
 <?php
-/**
- * BootstrapWP Theme Functions
- *
- * @author Rachel Baker <rachel@rachelbaker.me>
- * @package WordPress
- * @subpackage BootstrapWP
- */
 
-/**
- * Maximum allowed width of content within the theme.
- */
-if (!isset($content_width)) {
-    $content_width = 770;
-}
+include_once 'lib/bootstrap-four-wp-navwalker.php';
 
-/**
- * Setup Theme Functions
- *
- */
-if (!function_exists('bootstrapwp_theme_setup')):
-    function bootstrapwp_theme_setup() {
+global $bootstrap_four_version;
 
-        load_theme_textdomain('bootstrapwp', get_template_directory() . '/lang');
+$bootstrap_four_version = '4.0.0';
 
-        add_theme_support('automatic-feed-links');
-        add_theme_support('post-thumbnails');
-        add_theme_support('post-formats', array( 'aside', 'image', 'gallery', 'link', 'quote', 'status', 'video', 'audio', 'chat' ));
+// Le sigh...
+if ( ! isset( $content_width ) ) $content_width = 837;
 
-        register_nav_menus(
-            array(
-                'main-menu' => __('Main Menu', 'bootstrapwp'),
-            ));
-        // load custom walker menu class file
-        require 'includes/class-bootstrapwp_walker_nav_menu.php';
-    }
+
+if ( ! function_exists( 'bootstrap_four_widgets_init' ) ) :
+  function bootstrap_four_widgets_init() {
+    register_sidebar( array(
+      'name' => __( 'Right Sidebar', 'bootstrap-four' ),
+      'id' => 'right-sidebar',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>',
+    ) );
+  }
 endif;
-add_action('after_setup_theme', 'bootstrapwp_theme_setup');
-
-/**
- * Define post thumbnail size.
- * Add two additional image sizes.
- *
- */
-function bootstrapwp_images() {
-
-    set_post_thumbnail_size(260, 180); // 260px wide x 180px high
-    add_image_size('bootstrap-small', 300, 200); // 300px wide x 200px high
-    add_image_size('bootstrap-medium', 360, 270); // 360px wide by 270px high
-}
-
-/**
- * Load CSS styles for theme.
- *
- */
-function bootstrapwp_styles_loader() {
-
-    wp_enqueue_style('bootstrapwp-style', get_template_directory_uri() . '/assets/css/bootstrapwp.css', false, '1.0', 'all');
-    wp_enqueue_style('bootstrapwp-default', get_stylesheet_uri());
-
-    // registering scripts and styles for documentation templates
-    wp_register_style('docs-css', get_template_directory_uri() . '/templates-documentation/assets/css/docs.css', array('bootstrapwp-style'), '2.3.2', 'all');
-
-}
-add_action('wp_enqueue_scripts', 'bootstrapwp_styles_loader');
-
-/**
- * Load JavaScript and jQuery files for theme.
- *
- */
-function bootstrapwp_scripts_loader() {
-
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-
-        wp_enqueue_script('comment-reply');
-
-    }
-
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('demo-js', get_template_directory_uri() . '/assets/js/bootstrapwp.demo.js', array('bootstrap-js'),'1.0',true);
-
-}
-add_action('wp_enqueue_scripts', 'bootstrapwp_scripts_loader');
-
-/**
- * Define theme's widget areas.
- *
- */
-function bootstrapwp_widgets_init() {
-
-    register_sidebar(
-        array(
-            'name'          => __('Page Sidebar', 'bootstrapwp'),
-            'id'            => 'sidebar-page',
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __('Posts Sidebar', 'bootstrapwp'),
-            'id'            => 'sidebar-posts',
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</div>",
-            'before_title'  => '<h4 class="widget-title">',
-            'after_title'   => '</h4>',
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __('Home Left', 'bootstrapwp'),
-            'id'            => 'home-left',
-            'description'   => __('Left textbox on homepage', 'bootstrapwp'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __('Home Middle', 'bootstrapwp'),
-            'id'            => 'home-middle',
-            'description'   => __('Middle textbox on homepage', 'bootstrapwp'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __('Home Right', 'bootstrapwp'),
-            'id'            => 'home-right',
-            'description'   => __('Right textbox on homepage', 'bootstrapwp'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __('Footer Content', 'bootstrapwp'),
-            'id'            => 'footer-content',
-            'description'   => __('Footer text or acknowledgements', 'bootstrapwp'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h4>',
-            'after_title'   => '</h4>'
-        )
-    );
-
-}
-add_action('init', 'bootstrapwp_widgets_init');
+add_action( 'widgets_init', 'bootstrap_four_widgets_init' );
 
 
-/**
- * Display page next/previous navigation links.
- *
- */
-if (!function_exists('bootstrapwp_content_nav')):
-    function bootstrapwp_content_nav($nav_id) {
+if ( ! function_exists( 'bootstrap_four_setup' ) ) :
+  function bootstrap_four_setup() {
 
-        global $wp_query, $post;
+    add_theme_support( 'custom-background', array(
+      'default-color' => 'ffffff',
+    ) );
 
-        if ($wp_query->max_num_pages > 1) : ?>
+    add_theme_support( 'automatic-feed-links' );
 
-    <nav id="<?php echo $nav_id; ?>" class="navigation" role="navigation">
-        <h3 class="assistive-text"><?php _e('Post navigation', 'bootstrapwp'); ?></h3>
-        <div class="nav-previous alignleft">
-            <?php next_posts_link(
-                __('<span class="meta-nav">&larr;</span> Older posts', 'bootstrapwp')
-            ); ?></div>
-        <div class="nav-next alignright">
-            <?php previous_posts_link(
-                __('Newer posts <span class="meta-nav">&rarr;</span>', 'bootstrapwp')
-            ); ?></div>
-    </nav>
-    <!-- #<?php echo $nav_id; ?> .navigation -->
+    add_theme_support( 'title-tag' );
 
-    <?php endif;
-    }
+    add_theme_support( 'html5', array(
+      'search-form',
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption',
+    ) );
+
+    register_nav_menus( array(
+      'main_menu' => __( 'Main Menu', 'bootstrap-four' ),
+      // 'footer_menu' => 'Footer Menu'
+    ) );
+
+    add_editor_style( 'css/bootstrap.min.css' );
+  }
+endif; // bootstrap_four_setup
+add_action( 'after_setup_theme', 'bootstrap_four_setup' );
+
+
+if ( ! function_exists( 'bootstrap_four_theme_styles' ) ) :
+  function bootstrap_four_theme_styles() {
+    global $bootstrap_four_version;
+    wp_enqueue_style( 'bootstrap-four-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0' );
+    wp_register_style( 'bootstrap-four-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), $bootstrap_four_version );
+    wp_enqueue_style( 'bootstrap-four-styles', get_stylesheet_uri(), array( 'bootstrap-four-bootstrap' ), '1' );
+  }
 endif;
+add_action('wp_enqueue_scripts', 'bootstrap_four_theme_styles');
 
-/**
- * Display template for comments and pingbacks.
- *
- */
-if (!function_exists('bootstrapwp_comment')) :
-    function bootstrapwp_comment($comment, $args, $depth)
-    {
-        $GLOBALS['comment'] = $comment;
-        switch ($comment->comment_type) :
-            case 'pingback' :
-            case 'trackback' : ?>
 
-        <li class="comment media" id="comment-<?php comment_ID(); ?>">
-            <div class="media-body">
-                <p>
-                    <?php _e('Pingback:', 'bootstrapwp'); ?>
-                        <?php comment_author_link(); ?>
-                </p>
-            </div>
-            <!--/.media-body -->
-            <?php
-                break;
-            default :
-                // Proceed with normal comments.
-                global $post; ?>
-
-                <li class="comment media" id="li-comment-<?php comment_ID(); ?>">
-                    <a href="<?php echo $comment->comment_author_url;?>" class="pull-left">
-                        <?php echo get_avatar($comment, 64); ?>
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading comment-author vcard">
-                                <?php
-                                printf('<cite class="fn">%1$s %2$s</cite>',
-                                    get_comment_author_link(),
-                                    // If current post author is also comment author, make it known visually.
-                                    ($comment->user_id === $post->post_author) ? '<span class="label"> ' . __(
-                                        'Post author',
-                                        'bootstrapwp'
-                                    ) . '</span> ' : ''); ?>
-                            </h4>
-
-                        <?php if ('0' == $comment->comment_approved) : ?>
-                            <p class="comment-awaiting-moderation">
-                                <?php _e(
-                                    'Your comment is awaiting moderation.',
-                                    'bootstrapwp'
-                                ); ?>
-                            </p>
-                            <?php endif; ?>
-
-                                <?php comment_text(); ?>
-                                    <p class="meta">
-                                        <?php printf('<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
-                                            esc_url(get_comment_link($comment->comment_ID)),
-                                            get_comment_time('c'),
-                                            sprintf(
-                                                __('%1$s at %2$s', 'bootstrapwp'),
-                                                get_comment_date(),
-                                                get_comment_time()
-                                            )
-                                        ); ?>
-                                    </p>
-                                    <p class="reply">
-                                        <?php comment_reply_link( array_merge($args, array(
-                                            'reply_text' => __('Reply <span>&darr;</span>', 'bootstrapwp'),
-                                            'depth'      => $depth,
-                                            'max_depth'  => $args['max_depth']
-                                        )
-                                    )); ?>
-                                    </p>
-                    </div>
-                    <!--/.media-body -->
-                    <?php
-                break;
-        endswitch;
-    }
+if ( ! function_exists( 'bootstrap_four_theme_scripts' ) ) :
+  function bootstrap_four_theme_scripts() {
+    global $bootstrap_four_version;
+    wp_enqueue_script( 'bootstrap-four-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), $bootstrap_four_version, true );
+  }
 endif;
+add_action('wp_enqueue_scripts', 'bootstrap_four_theme_scripts');
 
 
-/**
- * Display template for post meta information.
- *
- */
-if (!function_exists('bootstrapwp_posted_on')) :
-    function bootstrapwp_posted_on()
-    {
-        printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>','bootstrapwp'),
-            esc_url(get_permalink()),
-            esc_attr(get_the_time()),
-            esc_attr(get_the_date('c')),
-            esc_html(get_the_date()),
-            esc_url(get_author_posts_url(get_the_author_meta('ID'))),
-            esc_attr(sprintf(__('View all posts by %s', 'bootstrapwp'), get_the_author())),
-            esc_html(get_the_author())
-        );
-    }
-endif;
-
-
-/**
- * Adds custom classes to the array of body classes.
- *
- */
-function bootstrapwp_body_classes($classes)
-{
-    if (!is_multi_author()) {
-        $classes[] = 'single-author';
-    }
-    return $classes;
+function bootstrap_four_nav_li_class( $classes, $item ) {
+  $classes[] .= ' nav-item';
+  return $classes;
 }
-add_filter('body_class', 'bootstrapwp_body_classes');
+add_filter( 'nav_menu_css_class', 'bootstrap_four_nav_li_class', 10, 2 );
 
 
-/**
- * Add post ID attribute to image attachment pages prev/next navigation.
- *
- */
-function bootstrapwp_enhanced_image_navigation($url)
-{
-    global $post;
-    if (wp_attachment_is_image($post->ID)) {
-        $url = $url . '#main';
-    }
-    return $url;
+function bootstrap_four_nav_anchor_class( $atts, $item, $args ) {
+  $atts['class'] .= ' nav-link';
+  return $atts;
 }
-add_filter('attachment_link', 'bootstrapwp_enhanced_image_navigation');
+add_filter( 'nav_menu_link_attributes', 'bootstrap_four_nav_anchor_class', 10, 3 );
 
 
-/**
- * Checks if a post thumbnails is already defined.
- *
- */
-function bootstrapwp_is_post_thumbnail_set()
-{
-    global $post;
-    if (get_the_post_thumbnail()) {
-        return true;
-    } else {
-        return false;
-    }
+function bootstrap_four_comment_form_before() {
+  echo '<div class="card"><div class="card-block">';
 }
+add_action( 'comment_form_before', 'bootstrap_four_comment_form_before', 10, 5 );
 
 
-/**
- * Set post thumbnail as first image from post, if not already defined.
- *
- */
-function bootstrapwp_autoset_featured_img()
-{
-    global $post;
+function bootstrap_four_comment_form( $fields ) {
+  $fields['fields']['author'] = '
+  <fieldset class="form-group comment-form-email">
+    <label for="author">' . __( 'Name *', 'bootstrap-four' ) . '</label>
+    <input type="text" class="form-control" name="author" id="author" placeholder="' . __( 'Name', 'bootstrap-four' ) . '" aria-required="true" required>
+  </fieldset>';
+  $fields['fields']['email'] ='
+  <fieldset class="form-group comment-form-email">
+    <label for="email">' . __( 'Email address *', 'bootstrap-four' ) . 'Email address *</label>
+    <input type="email" class="form-control" id="email" placeholder="' . __( 'Enter email', 'bootstrap-four' ) . '" aria-required="true" required>
+    <small class="text-muted">' . __( 'Your email address will not be published.', 'bootstrap-four' ) . '</small>
+  </fieldset>';
+  $fields['fields']['url'] = '
+  <fieldset class="form-group comment-form-email">
+    <label for="url">' . __( 'Website *', 'bootstrap-four' ) . '</label>
+    <input type="text" class="form-control" name="url" id="url" placeholder="' . __( 'http://example.org', 'bootstrap-four' ) . '">
+  </fieldset>';
+  $fields['comment_field'] = '
+  <fieldset class="form-group">
+    <label for="comment">' . __( 'Comment *', 'bootstrap-four' ) . '</label>
+    <textarea class="form-control" id="comment" name="comment" rows="3" aria-required="true" required></textarea>
+  </fieldset>';
+  $fields['comment_notes_before'] = '';
+  $fields['class_submit'] = 'btn btn-primary';
+  return $fields;
+}
+add_filter( 'comment_form_defaults', 'bootstrap_four_comment_form', 10, 5 );
 
-    $post_thumbnail = bootstrapwp_is_post_thumbnail_set();
-    if ($post_thumbnail == true) {
-        return get_the_post_thumbnail();
-    }
-    $image_args     = array(
-        'post_type'      => 'attachment',
-        'numberposts'    => 1,
-        'post_mime_type' => 'image',
-        'post_parent'    => $post->ID,
-        'order'          => 'desc'
+
+function bootstrap_four_comment_form_after() {
+  echo '</div><!-- .card-block --></div><!-- .card -->';
+}
+add_action( 'comment_form_after', 'bootstrap_four_comment_form_after', 10, 5 );
+
+
+/* * * * * * * * * * * * * * *
+ * BS4 Utility Functions
+ * * * * * * * * * * * * * * */
+
+function bootstrap_four_get_posts_pagination( $args = '' ) {
+  global $wp_query;
+  $pagination = '';
+
+  if ( $GLOBALS['wp_query']->max_num_pages > 1 ) :
+
+    $defaults = array(
+      'total'     => isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1,
+      'current'   => get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1,
+      'type'      => 'array',
+      'prev_text' => '&laquo;',
+      'next_text' => '&raquo;',
     );
-    $attached_images = get_children($image_args, ARRAY_A);
-    $first_image = reset($attached_images);
-    if (!$first_image) {
-        return false;
-    }
 
-    return get_the_post_thumbnail($post->ID, $first_image['ID']);
+    $params = wp_parse_args( $args, $defaults );
 
+    $paginate = paginate_links( $params );
+
+    if( $paginate ) :
+      $pagination .= "<ul class='pagination'>";
+      foreach( $paginate as $page ) :
+        if( strpos( $page, 'current' ) ) :
+          $pagination .= "<li class='active'>$page</li>";
+        else :
+          $pagination .= "<li>$page</li>";
+        endif;
+      endforeach;
+      $pagination .= "</ul>";
+    endif;
+
+  endif;
+
+  return $pagination;
 }
 
 
-/**
- * Define default page titles.
- *
- */
-function bootstrapwp_wp_title($title, $sep)
-{
-    global $paged, $page;
-    if (is_feed()) {
-        return $title;
-    }
-    // Add the site name.
-    $title .= get_bloginfo('name');
-    // Add the site description for the home/front page.
-    $site_description = get_bloginfo('description', 'display');
-    if ($site_description && (is_home() || is_front_page())) {
-        $title = "$title $sep $site_description";
-    }
-    // Add a page number if necessary.
-    if ($paged >= 2 || $page >= 2) {
-        $title = "$title $sep " . sprintf(__('Page %s', 'bootstrapwp'), max($paged, $page));
-    }
-    return $title;
-}
-add_filter('wp_title', 'bootstrapwp_wp_title', 10, 2);
-
-/**
- * Display template for breadcrumbs.
- *
- */
-function bootstrapwp_breadcrumbs()
-{
-    $home      = __('Home', 'bootstrapwp'); // text for the 'Home' link
-    $before    = '<li class="active">'; // tag before the current crumb
-    $sep       = '<span class="divider">/</span>';
-    $after     = '</li>'; // tag after the current crumb
-
-    if (!is_home() && !is_front_page() || is_paged()) {
-
-        echo '<ul class="breadcrumb">';
-
-        global $post;
-        $homeLink = home_url();
-            echo '<li><a href="' . $homeLink . '">' . $home . '</a> '.$sep. '</li> ';
-            if (is_category()) {
-                global $wp_query;
-                $cat_obj   = $wp_query->get_queried_object();
-                $thisCat   = $cat_obj->term_id;
-                $thisCat   = get_category($thisCat);
-                $parentCat = get_category($thisCat->parent);
-                if ($thisCat->parent != 0) {
-                    echo get_category_parents($parentCat, true, $sep);
-                }
-                echo $before . __('Archive by category', 'bootstrapwp') . ' "' . single_cat_title('', false) . '"' . $after;
-            } elseif (is_day()) {
-                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
-                    'Y'
-                ) . '</a></li> ';
-                echo '<li><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time(
-                    'F'
-                ) . '</a></li> ';
-                echo $before . get_the_time('d') . $after;
-            } elseif (is_month()) {
-                echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
-                    'Y'
-                ) . '</a></li> ';
-                echo $before . get_the_time('F') . $after;
-            } elseif (is_year()) {
-                echo $before . get_the_time('Y') . $after;
-            } elseif (is_single() && !is_attachment()) {
-                if (get_post_type() != 'post') {
-                    $post_type = get_post_type_object(get_post_type());
-                    $slug      = $post_type->rewrite;
-                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ';
-                    echo $before . get_the_title() . $after;
-                } else {
-                    $cat = get_the_category();
-                    $cat = $cat[0];
-                    echo '<li>'.get_category_parents($cat, true, $sep).'</li>';
-                    echo $before . get_the_title() . $after;
-                }
-            } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
-                $post_type = get_post_type_object(get_post_type());
-                echo $before . $post_type->labels->singular_name . $after;
-            } elseif (is_attachment()) {
-                $parent = get_post($post->post_parent);
-                $cat    = get_the_category($parent->ID);
-                $cat    = $cat[0];
-                echo get_category_parents($cat, true, $sep);
-                echo '<li><a href="' . get_permalink(
-                    $parent
-                ) . '">' . $parent->post_title . '</a></li> ';
-                echo $before . get_the_title() . $after;
-
-            } elseif (is_page() && !$post->post_parent) {
-                echo $before . get_the_title() . $after;
-            } elseif (is_page() && $post->post_parent) {
-                $parent_id   = $post->post_parent;
-                $breadcrumbs = array();
-                while ($parent_id) {
-                    $page          = get_page($parent_id);
-                    $breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title(
-                        $page->ID
-                    ) . '</a>' . $sep . '</li>';
-                    $parent_id     = $page->post_parent;
-                }
-                $breadcrumbs = array_reverse($breadcrumbs);
-                foreach ($breadcrumbs as $crumb) {
-                    echo $crumb;
-                }
-                echo $before . get_the_title() . $after;
-            } elseif (is_search()) {
-                echo $before . __('Search results for', 'bootstrapwp') . ' "'. get_search_query() . '"' . $after;
-            } elseif (is_tag()) {
-                echo $before . __('Posts tagged', 'bootstrapwp') . ' "' . single_tag_title('', false) . '"' . $after;
-            } elseif (is_author()) {
-                global $author;
-                $userdata = get_userdata($author);
-                echo $before . __('Articles posted by', 'bootstrapwp') . ' ' . $userdata->display_name . $after;
-            } elseif (is_404()) {
-                echo $before . __('Error 404', 'bootstrapwp') . $after;
-            }
-            // if (get_query_var('paged')) {
-            //     if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()
-            //     ) {
-            //         echo ' (';
-            //     }
-            //     echo __('Page', 'bootstrapwp') . $sep . get_query_var('paged');
-            //     if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()
-            //     ) {
-            //         echo ')';
-            //     }
-            // }
-
-        echo '</ul>';
-
-    }
+function bootstrap_four_the_posts_pagination( $args = '' ) {
+  echo bootstrap_four_get_posts_pagination( $args );
 }
 
-/**
- * This theme was built with PHP, Semantic HTML, CSS, love, and a bootstrap.
- */
 
 
 
@@ -515,41 +184,12 @@ function bootstrapwp_breadcrumbs()
 
 
 
-/**
- * Include the TGM_Plugin_Activation class.
- *
- * Depending on your implementation, you may want to change the include call:
- *
- * Parent Theme:
- * require_once get_template_directory() . '/path/to/class-tgm-plugin-activation.php';
- *
- * Child Theme:
- * require_once get_stylesheet_directory() . '/path/to/class-tgm-plugin-activation.php';
- *
- * Plugin:
- * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
- */
+
+
 require_once get_template_directory() . '/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'WP_Theme_for_AwanaHK_register_required_plugins' );
 
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register five plugins:
- * - one included with the TGMPA library
- * - two from an external source, one from an arbitrary source, one from a GitHub repository
- * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
- *
- * The variables passed to the `tgmpa()` function should be:
- * - an array of plugin arrays;
- * - optionally a configuration array.
- * If you are not changing anything in the configuration array, you can remove the array and remove the
- * variable from the function call: `tgmpa( $plugins );`.
- * In that case, the TGMPA default settings will be used.
- *
- * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
- */
 function WP_Theme_for_AwanaHK_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
