@@ -363,3 +363,11 @@ nav .form-control {
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+.bigbtndiv {
+    font-weight: 500;
+}
+
+.navbar-special .nav>li>a {
+    padding: 10px 7px;
+}
