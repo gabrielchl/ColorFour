@@ -266,3 +266,7 @@ nav .form-control {
     -o-border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
     border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
 }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border:none;
+}

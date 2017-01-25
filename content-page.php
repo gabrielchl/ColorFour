@@ -7,10 +7,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
+	<?php if (is_home()==true):?>
+    <header>
 		<h1 class="page-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-
+<?php endif; ?>
 	<div class="entry-content">
 		<div class="entry-content-thumbnail">
 			<?php the_post_thumbnail(); ?>
