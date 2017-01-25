@@ -4,7 +4,10 @@
     // the_post_thumbnail();
   ?>
 
-  <header class="entry-header">
+    
+    <?php
+if ( is_front_page() == False ) : ?>
+    <header class="entry-header">
     <?php
       if ( is_singular() ) :
         the_title( '<h1 class="entry-title display-1">', '</h1>' );
@@ -13,6 +16,14 @@
       endif;
     ?>
   </header><!-- .entry-header -->
+<?php
+endif;
+?>
+
+    
+    
+    
+  
 
   <div class="entry-content">
     <?php
