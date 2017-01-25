@@ -94,3 +94,16 @@ body > nav.navbar {
 nav.navbar {
   margin-bottom: 2rem;
 }
+
+.main-container {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+.top-menu-nav {
+    margin-top: 29px !important;
+    border-top: 4px solid #FE8453;
+    -webkit-border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round !important;
+    -o-border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
+    border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
+}

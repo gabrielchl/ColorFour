@@ -1,5 +1,4 @@
 <?php
-/*
 if ( is_single() || is_page() ) :
   echo '<div class="clearfix"></div>';
   if ( have_comments() && comments_open() ) : ?>
@@ -16,5 +15,5 @@ if ( is_single() || is_page() ) :
       comment_form();
     endif;
   endif;
-endif; */
+endif; 
 ?>
