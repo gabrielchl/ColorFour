@@ -20,7 +20,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="<?php echo get_stylesheet_directory_uri();?>/assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed"
-          href="<?php echo get_stylesheet_directory_uri();?>/assets/ico/apple-touch-icon-57-precomposed.png">  
+          href="<?php echo get_stylesheet_directory_uri();?>/assets/ico/apple-touch-icon-57-precomposed.png">
+    
+    <link rel='stylesheet' id='bootstrapwp-style-css'  href='http://gabrielcoderity.esy.es/awana/wp-content/themes/WP-Theme-for-AwanaHK/assets/css/bootstrapwp.css?ver=1.0' type='text/css' media='all' />
+    
+    
+    
     
 </head>
 <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10">
