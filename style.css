@@ -372,3 +372,7 @@ body {
 .navbar-special .nav>li>a {
     padding: 10px 7px;
 }
+
+.navbar-toogle {
+    margin-top: 25px;
+}

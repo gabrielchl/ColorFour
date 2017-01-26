@@ -78,7 +78,7 @@
             <?php echo $instance['text_three'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_three'] ?>;" aria-hidden="true"></i></div>
     </div>
-    <div class="col-md-3 col-sm-6" style="margin-bottom:30px;">
+    <div class="col-md-3 col-sm-6" style="margin-bottom:35px;">
         <div onclick="location.href='<?php echo $instance['link_four'] ?>';" class="bigbtndiv bigbtndivfour" style="background-color: <?php echo $instance['color_four'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_four'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_four'] ?>;" aria-hidden="true"></i></div>
