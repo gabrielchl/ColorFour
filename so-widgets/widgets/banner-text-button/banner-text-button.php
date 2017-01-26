@@ -50,6 +50,16 @@ class Banner_Text_Button extends SiteOrigin_Widget {
                 'label' => __('Button text', 'section-title-bundle'),
                 'default' => 'Text Here'
             ),
+            'banner-text-align' => array(
+                'type' => 'radio',
+                'label' => __( 'Text alignment', 'section-title-bundle' ),
+                'default' => 'center',
+                'options' => array(
+                'left' => __( 'Left', 'section-title-bundle' ),
+                'center' => __( 'Center', 'section-title-bundle' ),
+                'right' => __( 'Right', 'section-title-bundle' )
+            )
+    )
         ),
         
 

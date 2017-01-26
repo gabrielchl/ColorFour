@@ -1,6 +1,6 @@
 <div class="row" style="padding-top:40px; padding-bottom:40px;">
     <div class="container" style="padding-bottom:0;">
-        <div class="container" style="padding-bottom:0;">
+        <div class="container" style="padding-bottom:0; text-align:<?php echo $instance['banner-text-align']; ?>">
             <h2 style="color: #FE8453; font-size:48px;">
                 <?php echo $instance['banner-text-button-text-one'];?>
             </h2>
