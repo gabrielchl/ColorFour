@@ -20,7 +20,8 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
-            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> </head>
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+            <link href="includes/css/hover.css" rel="stylesheet"> </head>
 
     <body <?php body_class(); ?>>
         <?php do_action( 'before' ); ?>

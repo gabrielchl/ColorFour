@@ -168,39 +168,28 @@ function woocommerce_support() {
 }
 
 
-
-
-
-
-
 require_once get_template_directory() . '/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'WP_Theme_for_AwanaHK_register_required_plugins' );
 
-
 function WP_Theme_for_AwanaHK_register_required_plugins() {
 	$plugins = array(
-
 		array(
 			'name'      => 'Page Builder by SiteOrigin',
 			'slug'      => 'siteorigin-panels',
 			'required'  => true,
 		),
-        
         array(
 			'name'      => 'SiteOrigin Widgets Bundle',
 			'slug'      => 'so-widgets-bundle',
 			'required'  => true,
 		),
-        
         array(
 			'name'      => 'Polylang',
 			'slug'      => 'polylang',
 			'required'  => true,
 		),
-
 	);
-
 	
 	$config = array(
 		'id'           => 'WP-Theme-for-AwanaHK',                 // Unique ID for hashing notices for multiple instances of TGMPA.
@@ -214,9 +203,7 @@ function WP_Theme_for_AwanaHK_register_required_plugins() {
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 
-		
 	);
-
 	tgmpa( $plugins, $config );
 }
 
