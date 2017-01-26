@@ -56,6 +56,12 @@
                 margin-bottom: 30px;
             }
         }
+        
+        @media screen and (max-width: 766px) {
+            .four-link-box-margin-special-two {
+                margin-bottom: 30px;
+            }
+        }
     </style>
     <div class="col-md-3 col-sm-6 four-link-box-margin-special" style="">
         <div onclick="location.href='<?php echo $instance['link_one'] ?>';" class="bigbtndiv bigbtndivone" style="background-color: <?php echo $instance['color_one'] ?>; color:#fff; cursor:pointer;">
@@ -67,7 +73,7 @@
             <?php echo $instance['text_two'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_two'] ?>;" aria-hidden="true"></i></div>
     </div>
-    <div class="col-md-3 col-sm-6" style="">
+    <div class="col-md-3 col-sm-6 four-link-box-margin-special-two" style="">
         <div onclick="location.href='<?php echo $instance['link_three'] ?>';" class="bigbtndiv bigbtndivthree" style="background-color: <?php echo $instance['color_three'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_three'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_three'] ?>;" aria-hidden="true"></i></div>

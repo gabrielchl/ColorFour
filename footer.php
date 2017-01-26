@@ -19,8 +19,8 @@
         <?php // substitute the class "container-fluid" below if you want a wider content area ?>
             <style>
                 .footerfourbox {
-                    padding-top: 40px;
-                    padding-bottom: 40px;
+                    padding-top: 20px;
+                    padding-bottom: 25px;
                 }
             </style>
             <div class="" style="background-color:#666;">
@@ -51,7 +51,7 @@
             </div>
             <div class="" style="background-color:#444;">
                 <div class="" id="getthisheiht" style="padding-bottom:0;">
-                    <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span> </div>
+                    <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2017 &copy; Awana Hong Kong LTD, Designed by Gabriel Lee</span> </div>
                 </div>
             </div>
     </footer>
