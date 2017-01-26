@@ -345,6 +345,7 @@ nav .form-control {
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
     background-color: #fff;
+    font-weight: 600;
 }
 
 .navbar-special {

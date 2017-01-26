@@ -1,4 +1,4 @@
-<div class="" id="" tabindex="" style="color:white; font-size:30px; text-align:center;">
+<div class="" id="" tabindex="" style="color:white; font-size:30px; text-align:center; padding-top:35px; padding-bottom:35px;">
     <style>
         .bigrightbtn {
             font-size: 16px;
@@ -17,7 +17,6 @@
             padding-bottom: 34px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 25px;
         }
         
         .bigbtndivone:hover {
@@ -51,23 +50,29 @@
         .bigbtndivfour:hover i {
             color: #f3da74;
         }
+        
+        @media screen and (max-width: 991px) {
+            .four-link-box-margin-special {
+                margin-bottom: 20px;
+            }
+        }
     </style>
-    <div class="col-md-3 col-sm-6" style="margin-top: 25px;">
+    <div class="col-md-3 col-xs-6 four-link-box-margin-special" style="">
         <div onclick="location.href='<?php echo $instance['link_one'] ?>';" class="bigbtndiv bigbtndivone" style="background-color: <?php echo $instance['color_one'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_one'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_one'] ?>;" aria-hidden="true"></i></div>
     </div>
-    <div class="col-md-3 col-sm-6" style="margin-top: 25px;">
+    <div class="col-md-3 col-xs-6 four-link-box-margin-special" style="">
         <div onclick="location.href='<?php echo $instance['link_two'] ?>';" class="bigbtndiv bigbtndivtwo" style="background-color: <?php echo $instance['color_two'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_two'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_two'] ?>;" aria-hidden="true"></i></div>
     </div>
-    <div class="col-md-3 col-sm-6" style="margin-top: 25px;">
+    <div class="col-md-3 col-xs-6" style="">
         <div onclick="location.href='<?php echo $instance['link_three'] ?>';" class="bigbtndiv bigbtndivthree" style="background-color: <?php echo $instance['color_three'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_three'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_three'] ?>;" aria-hidden="true"></i></div>
     </div>
-    <div class="col-md-3 col-sm-6" style="margin-top: 25px;">
+    <div class="col-md-3 col-xs-6" style="">
         <div onclick="location.href='<?php echo $instance['link_four'] ?>';" class="bigbtndiv bigbtndivfour" style="background-color: <?php echo $instance['color_four'] ?>; color:#fff; cursor:pointer;">
             <?php echo $instance['text_four'] ?>
                 <br><i class="fa fa-chevron-right bigrightbtn" style="color: <?php echo $instance['color_four'] ?>;" aria-hidden="true"></i></div>
