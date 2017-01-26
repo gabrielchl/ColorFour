@@ -1,14 +1,7 @@
 <div class="" id="" tabindex="" style="color:white; font-size:30px; text-align:center; padding-top:35px; padding-bottom:35px;">
     <style>
         .bigrightbtn {
-            font-size: 16px;
-            background-color: #fff;
-            border-radius: 100%;
-            padding-left: 10px;
-            padding-right: 8px;
-            padding-top: 7px;
-            padding-bottom: 7px;
-            font-weight: bold;
+            font-size: 27px;
         }
         
         .bigbtndiv {
@@ -23,32 +16,16 @@
             background-color: #ffa47f !important;
         }
         
-        .bigbtndivone:hover i {
-            color: #ffa47f !important;
-        }
-        
         .bigbtndivtwo:hover {
             background-color: #a6ced8 !important;
-        }
-        
-        .bigbtndivtwo:hover i {
-            color: #a6ced8 !important;
         }
         
         .bigbtndivthree:hover {
             background-color: #aacea2 !important;
         }
         
-        .bigbtndivthree:hover i {
-            color: #aacea2 !important;
-        }
-        
         .bigbtndivfour:hover {
             background-color: #f3da74 !important;
-        }
-        
-        .bigbtndivfour:hover i {
-            color: #f3da74 !important;
         }
         
         @media screen and (max-width: 991px) {
