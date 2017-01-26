@@ -15,11 +15,11 @@
                 </center>
             </div>
             <script>
-                var element = document.getElementById('getthisheiht');
-                var thisheight = element.offsetHeight;
-                var myElement = document.getElementById('changethisprop');
-                thisheight += "px";
-                myElement.style.lineHeight = thisheight;
+                //var element = document.getElementById('getthisheiht');
+                //var thisheight = element.offsetHeight;
+                //var myElement = document.getElementById('changethisprop');
+                //thisheight += "px";
+                //myElement.style.lineHeight = thisheight;
             </script>
         </div>
     </div>

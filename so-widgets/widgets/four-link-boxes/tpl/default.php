@@ -32,23 +32,23 @@
         }
         
         .bigbtndivtwo:hover i {
-            color: #a6ced8;
+            color: #a6ced8 !important;
         }
         
         .bigbtndivthree:hover {
-            background-color: #aacea2;
+            background-color: #aacea2 !important;
         }
         
         .bigbtndivthree:hover i {
-            color: #aacea2;
+            color: #aacea2 !important;
         }
         
         .bigbtndivfour:hover {
-            background-color: #f3da74;
+            background-color: #f3da74 !important;
         }
         
         .bigbtndivfour:hover i {
-            color: #f3da74;
+            color: #f3da74 !important;
         }
         
         @media screen and (max-width: 991px) {
