@@ -49,9 +49,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="background-color:#444;">
-                <div class="container" id="getthisheiht" style="padding-bottom:0;">
-                    <div class="container" style="padding-bottom:0;"> <span style="line-height:60px; color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span> </div>
+            <div class="" style="background-color:#444;">
+                <div class="" id="getthisheiht" style="padding-bottom:0;">
+                    <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2016 All Rights Reserved by Awana Hong Kong LTD</span> </div>
                 </div>
             </div>
     </footer>
