@@ -369,10 +369,15 @@ body {
     font-weight: 500;
 }
 
-.navbar-special .nav>li>a {
-    padding: 10px 7px;
+#main-menu li a {
+    padding: 10px 10px;
 }
 
 .navbar-toogle {
     margin-top: 25px;
+}
+
+#pg-2-0,
+#pl-2 .panel-grid-cell .so-panel {
+    margin-bottom: 0;
 }

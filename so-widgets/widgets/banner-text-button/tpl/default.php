@@ -1,14 +1,14 @@
 <div class="row" style="padding-top:40px; padding-bottom:40px;">
     <div class="container" style="padding-bottom:0;">
         <div class="container" style="padding-bottom:0; text-align:<?php echo $instance['banner-text-align']; ?>">
-            <h2 style="color: #FE8453; font-size:48px; margin-top:0;">
+            <h2 style="color: #fff; font-size:48px; margin-top:0;">
                 <?php echo $instance['banner-text-button-text-one'];?>
             </h2>
-            <p style="color: #FE8453;">
+            <p style="font-weight: 500; color: #fff; font-size: 16px;">
                 <?php echo $instance['banner-text-button-text-two'];?>
             </p>
-            <div style="margin-top:20px;">
-                <a href="<?php echo $instance['banner-text-button-button-link'];?>" style="background-color: #FE8453; color:#fff; padding: 9px 30px;">
+            <div style="margin-top:20px; margin-bottom:16px;">
+                <a href="<?php echo $instance['banner-text-button-button-link'];?>" style="font-weight: 500; background-color: #fff; color: #000; padding: 9px 30px;">
                     <?php echo $instance['banner-text-button-button-text'];?>
                 </a>
             </div>
