@@ -21,7 +21,7 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-            <link href="<?php echo get_stylesheet_directory(); ?>/includes/css/hover.css" rel="stylesheet"> </head>
+            <link href="/wp-content/themes/WP-Theme-for-AwanaHK/includes/css/hover.css" rel="stylesheet"> </head>
 
     <body <?php body_class(); ?>>
         <?php do_action( 'before' ); ?>
