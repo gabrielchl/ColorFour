@@ -55,11 +55,11 @@ class Banner_Text_Button extends SiteOrigin_Widget {
                 'label' => __( 'Text alignment', 'section-title-bundle' ),
                 'default' => 'center',
                 'options' => array(
-                'left' => __( 'Left', 'section-title-bundle' ),
-                'center' => __( 'Center', 'section-title-bundle' ),
-                'right' => __( 'Right', 'section-title-bundle' )
+                    'left' => __( 'Left', 'section-title-bundle' ),
+                    'center' => __( 'Center', 'section-title-bundle' ),
+                    'right' => __( 'Right', 'section-title-bundle' )
+                )
             )
-    )
         ),
         
 
