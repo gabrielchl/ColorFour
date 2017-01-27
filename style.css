@@ -386,7 +386,7 @@ body {
 #pg-2-1,
 #pg-2-2,
 #pl-2 .panel-grid-cell .so-panel {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .navbar-toggle {
