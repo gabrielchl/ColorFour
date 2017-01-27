@@ -1,4 +1,4 @@
-<div class="row" style="">
+<div class="row" style="margin-bottom:35px;">
     <div class="container">
         <div class="row">
             <?php
