@@ -1,4 +1,4 @@
-<div class="" id="" tabindex="" style="color:white; font-size:30px; text-align:center; padding-top:35px; padding-bottom:35px;">
+<div class="" id="" tabindex="" style="color:white; font-size:30px; text-align:center; padding-top:35px; padding-bottom:0;">
     <style>
         .bigrightbtn {
             font-size: 27px;

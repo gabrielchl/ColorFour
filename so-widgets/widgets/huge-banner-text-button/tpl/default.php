@@ -1,4 +1,4 @@
-<div class="row" style="padding-top:200px; padding-bottom:200px;">
+<div class="row" style="padding-top:160px; padding-bottom:160px;">
     <div class="container" style="padding-bottom:0;">
         <div class="container" style="padding-bottom:0; text-align:<?php echo $instance['huge-banner-text-align']; ?>">
             <div style="max-width:600px;">
