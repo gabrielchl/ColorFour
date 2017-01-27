@@ -1,7 +1,7 @@
 <div class="row" style="padding-top:160px; padding-bottom:160px;">
     <div class="container" style="padding-bottom:0;">
         <div class="container" style="padding-bottom:0; text-align:<?php echo $instance['huge-banner-text-align']; ?>">
-            <div style="max-width:600px;">
+            <div style="max-width:820px;">
                 <h2 style="color: #fff; font-size:48px; margin-top:0;">
                 <?php echo $instance['huge-banner-text-button-text-one'];?>
             </h2>

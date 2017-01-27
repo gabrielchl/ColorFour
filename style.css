@@ -393,6 +393,10 @@ body {
     margin-top: 25px;
 }
 
-.siteorigin-panels-stretch panel-row-style {
+.panel-row-style {
     background-position: center;
+}
+
+.navbar-brand>img {
+    max-width: calc(100vw - 140px);
 }
