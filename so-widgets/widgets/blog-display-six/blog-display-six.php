@@ -27,6 +27,10 @@ class Blog_Display_Six extends SiteOrigin_Widget {
 
         //The $control_options array, which is passed through to WP_Widget
         array(
+        'posts' => array(
+				'type' => 'posts',
+				'label' => __('Posts query', 'so-widgets-bundle'),
+			),
         ),
 
         //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.

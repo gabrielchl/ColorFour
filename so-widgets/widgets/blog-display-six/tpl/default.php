@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <?php
-$posts = new WP_Query(array( 'posts_per_page' => 6, 'orderby' => 'date', 'order' => 'DSC', 'post_type'  => 'post', ));
+            $query = siteorigin_widget_post_selector_process_query( $instance['posts'] );
+$posts = new WP_Query($query);
 while($posts->have_posts()) : $posts->the_post(); ?>
                 <div class="col-md-4 col-sm-6 newholder">
                     <div class="newsimg" style="width:100%; height: 200px; background-image:url('<?php if ( has_post_thumbnail() ) {
