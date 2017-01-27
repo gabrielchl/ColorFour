@@ -15,7 +15,7 @@
     <!-- close .container -->
     </div>
     <!-- close .main-content -->
-    <footer id="colophon" class="site-footer main-content" role="contentinfo" style="<?php if (is_home() == true) {echo margin-top:30px; } else {} ?>">
+    <footer id="colophon" class="site-footer main-content" role="contentinfo" style="<?php if (is_home() == true) {echo 'margin-top:30px'; } else {} ?>">
         <?php // substitute the class "container-fluid" below if you want a wider content area ?>
             <style>
                 .footerfourbox {
