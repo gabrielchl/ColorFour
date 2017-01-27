@@ -388,3 +388,11 @@ body {
 #pl-2 .panel-grid-cell .so-panel {
     margin-bottom: 0;
 }
+
+.navbar-toggle {
+    margin-top: 25px;
+}
+
+.siteorigin-panels-stretch panel-row-style {
+    background-position: center;
+}
