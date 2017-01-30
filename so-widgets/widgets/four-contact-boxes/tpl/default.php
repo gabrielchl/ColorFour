@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="padding-bottom:0;">
     <div class="row">
         <div class="col-sm-6 col-xs-6 four-contact-boxes four-contact-boxes-one">
             <div class="contact-box-icon"><i class="contact-fa fa fa-map-marker" aria-hidden="true" style="color:#FE8453"></i></div>

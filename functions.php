@@ -282,3 +282,196 @@ function widget_footer_four() {
 
 }
 add_action( 'widgets_init', 'widget_footer_four' );
+
+
+
+
+
+
+function awana_prebuilt_layouts_home($layoutshome){
+    $layoutshome['home-page'] = array(
+        // We'll add a title field
+        'name' => __('Default Home', 'vantage'),    // Required
+        'description' => __('Default Home', 'vantage'),    // Optional
+        //'screenshot' => plugin_dir_url( __FILE__ ) . 'images/layout-screenshot.png',    // Optional
+        'widgets' => 
+            array (
+                0 => 
+                    array (
+                        'huge-banner-text-button-text-one' => 'Approved Workmen Are Not Ashamed',
+                        'huge-banner-text-button-text-two' => 'Awana is an Bible-centered ministry that provides club programs for children through the local church.',
+                        'huge-banner-text-button-button-link' => 'http://www.google.com/',
+                        'huge-banner-text-button-button-text' => 'About Us',
+                        'huge-banner-text-align' => 'left',
+                        '_sow_form_id' => '588ad55d86491',
+                        'panels_info' => 
+                        array (
+                            'class' => 'Huge_Banner_Text_Button',
+                            'raw' => false,
+                            'grid' => 0,
+                            'cell' => 0,
+                            'id' => 0,
+                            'widget_id' => 'e5966d73-370d-486f-9f64-c674b6ec2287',
+                            'style' => 
+                            array (
+                                'background_display' => 'tile',
+                            ),
+                        ),
+                    ),
+            1 => 
+                array (
+                    'text_one' => 'About',
+                    'url_one' => 'http://www.google.com.hk/',
+                    'color_one' => '#FE8453',
+                    'text_two' => 'News',
+                    'url_two' => 'http://www.google.com.hk/',
+                    'color_two' => '#80C3D3',
+                    'text_three' => 'Resources',
+                    'url_three' => 'http://www.google.com.hk/',
+                    'color_three' => '#88C87A',
+                    'text_four' => 'Gallrry',
+                    'url_four' => 'http://www.google.com.hk/',
+                    'color_four' => '#F1CD3B',
+                    '_sow_form_id' => '588808cb77297',
+                    'panels_info' => 
+                    array (
+                      'class' => 'Four_Link_Boxes',
+                      'raw' => false,
+                      'grid' => 1,
+                      'cell' => 0,
+                      'id' => 1,
+                      'widget_id' => 'bbcfdf76-c581-491a-b9c5-0ae437d82568',
+                      'style' => 
+                        array (
+                            'background_display' => 'tile',
+                        ),
+                    ),
+            ),
+    2 => 
+    array (
+      'section-title-text' => 'LATEST NEWS',
+      'section-title-color' => '#F1CD3B',
+      '_sow_form_id' => '588a016acd907',
+      'panels_info' => 
+      array (
+        'class' => 'Section_Title',
+        'raw' => false,
+        'grid' => 2,
+        'cell' => 0,
+        'id' => 2,
+        'widget_id' => 'c339ebb4-89c2-4ba9-a5f1-f37798b0776b',
+        'style' => 
+        array (
+          'background_display' => 'tile',
+        ),
+      ),
+    ),
+    3 => 
+    array (
+      'posts' => 'post_type=post&date_query={"after":"","before":""}&orderby=date&order=DESC&posts_per_page=6&sticky=&additional=',
+      '_sow_form_id' => '588a00c3e354c',
+      'panels_info' => 
+      array (
+        'class' => 'Blog_Display_Six',
+        'raw' => false,
+        'grid' => 2,
+        'cell' => 0,
+        'id' => 3,
+        'widget_id' => '16f322d5-d5dc-4f68-8638-721c3e1c289f',
+        'style' => 
+        array (
+          'background_display' => 'tile',
+        ),
+      ),
+    ),
+    4 => 
+    array (
+      'banner-text-button-text-one' => 'VOLUNTEER!',
+      'banner-text-button-text-two' => 'We are currently bla bla bla bla bla and we need you to help!',
+      'banner-text-button-button-link' => 'http://www.google.com/',
+      'banner-text-button-button-text' => 'Text Here',
+      '_sow_form_id' => '588961df2ecba',
+      'panels_info' => 
+      array (
+        'class' => 'Banner_Text_Button',
+        'raw' => false,
+        'grid' => 3,
+        'cell' => 0,
+        'id' => 4,
+        'widget_id' => '8e36250c-e191-4fb8-8d76-944d2ff34860',
+        'style' => 
+        array (
+          'background_display' => 'tile',
+        ),
+      ),
+    ),
+  ),
+  'grids' => 
+  array (
+    0 => 
+    array (
+      'cells' => 1,
+      'style' => 
+      array (
+        'row_stretch' => 'full',
+        'background_image_attachment' => 63,
+        'background_display' => 'cover',
+      ),
+    ),
+    1 => 
+    array (
+      'cells' => 1,
+      'style' => 
+      array (
+        'row_stretch' => 'full',
+        'background' => '#ededed',
+        'background_display' => 'tile',
+      ),
+    ),
+    2 => 
+    array (
+      'cells' => 1,
+      'style' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
+      'cells' => 1,
+      'style' => 
+      array (
+        'row_stretch' => 'full',
+        'background' => '#4c4c4c',
+        'background_image_attachment' => 24,
+        'background_display' => 'cover',
+      ),
+    ),
+  ),
+  'grid_cells' => 
+  array (
+    0 => 
+    array (
+      'grid' => 0,
+      'weight' => 1,
+    ),
+    1 => 
+    array (
+      'grid' => 1,
+      'weight' => 1,
+    ),
+    2 => 
+    array (
+      'grid' => 2,
+      'weight' => 1,
+    ),
+    3 => 
+    array (
+      'grid' => 3,
+      'weight' => 1,
+    ),
+  ),
+    );
+    return $layoutshome;
+
+}
+add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
