@@ -194,6 +194,11 @@ function WP_Theme_for_AwanaHK_register_required_plugins() {
 			'slug'      => 'wp-google-maps',
 			'required'  => true,
 		),
+        array(
+			'name'      => 'Ultimate Addons for SiteOrigin',
+			'slug'      => 'addon-so-widgets-bundle',
+			'required'  => true,
+		),
 	);
 	
 	$config = array(

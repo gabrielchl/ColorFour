@@ -32,7 +32,7 @@ class Four_Stat_Boxes extends SiteOrigin_Widget {
 			),
 
 			'number_one' => array(
-				'type' => 'link',
+				'type' => 'text',
 				'label' => __('First Box Number', 'awana-widgets-bundle'),
 			),
             
@@ -47,7 +47,7 @@ class Four_Stat_Boxes extends SiteOrigin_Widget {
 			),
 
 			'number_two' => array(
-				'type' => 'link',
+				'type' => 'text',
 				'label' => __('Second Box Number', 'awana-widgets-bundle'),
 			),
             
@@ -62,7 +62,7 @@ class Four_Stat_Boxes extends SiteOrigin_Widget {
 			),
 
 			'number_three' => array(
-				'type' => 'link',
+				'type' => 'text',
 				'label' => __('Third Box Number', 'awana-widgets-bundle'),
 			),
             
@@ -77,7 +77,7 @@ class Four_Stat_Boxes extends SiteOrigin_Widget {
 			),
 
 			'number_four' => array(
-				'type' => 'link',
+				'type' => 'text',
 				'label' => __('Fourth Box Number', 'awana-widgets-bundle'),
 			),
             
