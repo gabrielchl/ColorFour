@@ -199,6 +199,11 @@ function WP_Theme_for_AwanaHK_register_required_plugins() {
 			'slug'      => 'addon-so-widgets-bundle',
 			'required'  => true,
 		),
+        array(
+			'name'      => 'The Events Calendar',
+			'slug'      => 'the-events-calendar',
+			'required'  => true,
+		),
 	);
 	
 	$config = array(
@@ -480,3 +485,9 @@ function awana_prebuilt_layouts_home($layoutshome){
 
 }
 add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
+
+$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'image_control', array(
+  'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
+  'section' => 'media',
+  'mime_type' => 'image',
+) ) );
