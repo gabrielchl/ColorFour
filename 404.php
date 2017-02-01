@@ -24,7 +24,7 @@ get_header(); ?>
                             break;
                     }
                     ?>
-                        <h1 style="font-weight: bold; font-size:70px;">Nothing Here?!</h1>
+                        <h1 style="font-weight: bold; font-size:70px;"><?php echo $printfourofour; ?></h1>
                         <p style="font-weight: 500;">The page you've been looking for has gone... :'(
                             <br>Maybe you would like to get back?</p>
                 </div>
