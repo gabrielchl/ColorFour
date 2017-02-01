@@ -3,26 +3,25 @@
  * @package _tk
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h1 class="page-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php _tk_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<div class="entry-content-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</div>
-		<?php the_content(); ?>
-		<?php _tk_link_pages(); ?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		<?php
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header>
+            <h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>
+            <!-- .entry-meta -->
+        </header>
+        <!-- .entry-header -->
+        <div class="entry-content">
+            <div class="entry-content-thumbnail">
+                <?php the_post_thumbnail(); ?>
+            </div>
+            <?php the_content(); ?>
+                <?php _tk_link_pages(); ?>
+        </div>
+        <!-- .entry-content -->
+        <footer class="entry-meta">
+            <div class="entry-meta">
+                <?php _tk_posted_on(); ?>
+            </div>
+            <?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', '_tk' ) );
 
@@ -55,7 +54,7 @@
 				the_title_attribute( 'echo=0' )
 			);
 		?>
-
-		<?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+                <?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?> </footer>
+        <!-- .entry-meta -->
+    </article>
+    <!-- #post-## -->
