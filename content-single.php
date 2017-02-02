@@ -6,7 +6,7 @@
     <article style="margin-top:20px; margin-bottom:20px;background-color:#fff;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header style="border-bottom: 1px solid #ededed; margin-bottom:20px;">
             <div style="height:100px; padding:20px; border-bottom:1px solid #ededed;">
-                <div style="font-size:28px; text-align:center; margin-top:10px;">
+                <div style="font-size:28px; text-align:left;">
                     <?php the_title(); ?>
                 </div>
                 <div>
@@ -17,7 +17,7 @@
             <!-- .entry-meta -->
         </header>
         <!-- .entry-header -->
-        <div class="entry-content" style="padding:20px;">
+        <div class="entry-content" style="padding:20px 20px 0 20px;">
             <div class="entry-content-thumbnail">
                 <?php the_post_thumbnail(); ?>
             </div>
@@ -25,8 +25,8 @@
                 <?php _tk_link_pages(); ?>
         </div>
         <!-- .entry-content -->
-        <footer class="entry-meta">
-            <div class="entry-meta">
+        <footer class="entry-meta" style="padding:0 20px 20px 20px;>
+            <div class=" entry-meta ">
                 <?php _tk_posted_on(); ?>
             </div>
             <?php
@@ -39,17 +39,17 @@
 			if ( ! _tk_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', '_tk' );
+					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s " title="Permalink to %4$s " rel="bookmark ">permalink</a>.', '_tk' );
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', '_tk' );
+					$meta_text = __( 'Bookmark the <a href="%3$s " title="Permalink to %4$s " rel="bookmark ">permalink</a>.', '_tk' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', '_tk' );
+					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s " title="Permalink to %4$s " rel="bookmark ">permalink</a>.', '_tk' );
 				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', '_tk' );
+					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s " title="Permalink to %4$s " rel="bookmark ">permalink</a>.', '_tk' );
 				}
 
 			} // end check for categories on this blog
@@ -62,7 +62,7 @@
 				the_title_attribute( 'echo=0' )
 			);
 		?>
-                <?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?> </footer>
+                <?php edit_post_link( __( 'Edit', '_tk' ), '<span class="edit-link ">', '</span>' ); ?> </footer>
         <!-- .entry-meta -->
     </article>
     <!-- #post-## -->
