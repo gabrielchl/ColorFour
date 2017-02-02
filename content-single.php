@@ -5,15 +5,15 @@
 ?>
     <article style="margin-top:20px; margin-bottom:20px;background-color:#fff; border: 1px solid #ededed;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header style="border-bottom: 1px solid #ededed;">
-            <div class="col-xs-2" style="border-right: 1px solid #ededed; height:100px; text-align:center;">
+            <div class="col-sm-2" style="border-right: 1px solid #ededed; height:100px; text-align:center;">
                 <div> <span class="post-date" style="clear: both; color: #000; display: block; font-size: 36px; margin: 0 0 10px;"><?php the_date('d', '', ''); ?></span> <span class="post-month uppercase" style="margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; vertical-align: baseline; text-transform: uppercase;"><?php the_date('m', '', ''); ?></span> <span class="post-year uppercase" style="margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; vertical-align: baseline;"><?php the_date('Y', '', ''); ?></span> </div>
             </div>
-            <div class="col-xs-10" style="height:100px;"> <span style="font-size:28px; text-align:center; margin-top:10px;"><?php the_title(); ?></span> </div>
+            <div class="col-sm-10" style="height:100px; padding:20px;"> <span style="font-size:28px; text-align:center; margin-top:10px;"><?php the_title(); ?></span> </div>
             <!--<h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>-->
             <!-- .entry-meta -->
         </header>
         <!-- .entry-header -->
-        <div class="entry-content">
+        <div class="entry-content" style="padding:20px;">
             <div class="entry-content-thumbnail">
                 <?php the_post_thumbnail(); ?>
             </div>
