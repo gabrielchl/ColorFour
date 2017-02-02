@@ -4,11 +4,15 @@
  */
 ?>
     <article style="margin-top:20px; margin-bottom:20px;background-color:#fff;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header style="border-bottom: 1px solid #ededed;">
-            <div class="col-sm-2" style="border-right: 1px solid #ededed; height:100px; text-align:center; padding:20px; border: 1px solid #ededed;">
-                <div> <span class="post-date" style="clear: both; color: #000; display: block; font-size: 36px; margin: 0 0 10px;"><?php the_date('d', '', ''); ?></span> <span class="post-month uppercase" style="margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; vertical-align: baseline; text-transform: uppercase;"><?php the_date('F', '', ''); ?></span> <span class="post-year uppercase" style="margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; vertical-align: baseline;"><?php the_date('Y', '', ''); ?></span> </div>
+        <header style="border-bottom: 1px solid #ededed; margin-bottom:20px;">
+            <div style="height:100px; padding:20px; border-bottom:1px solid #ededed;">
+                <div style="font-size:28px; text-align:center; margin-top:10px;">
+                    <?php the_title(); ?>
+                </div>
+                <div>
+                    <?php the_date(); ?>
+                </div>
             </div>
-            <div class="col-sm-10" style="height:100px; padding:20px;"> <span style="font-size:28px; text-align:center; margin-top:10px; border: 1px solid #ededed;"><?php the_title(); ?></span> </div>
             <!--<h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>-->
             <!-- .entry-meta -->
         </header>
