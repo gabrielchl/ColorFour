@@ -3,14 +3,13 @@
  * @package _tk
  */
 ?>
-    <article style="background-color:#fff; border: 1px solid #ededed;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article style="margin-top:20px; margin-bottom:20px;background-color:#fff; border: 1px solid #ededed;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header style="border-bottom: 1px solid #ededed;">
-            <div class="col-xs-2" style="border-right: 1px solid #ededed;">
+            <div class="col-xs-2" style="border-right: 1px solid #ededed; height:60px; text-align:center;">
                 <?php the_date('d', '', ''); ?>
-                    <?php the_date('m, Y', '', ''); ?>
+                    <?php the_date('m-Y', '', ''); ?>
             </div>
-            <div class="col-xs-10">
-                <h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1> </div>
+            <div class="col-xs-10" style="height:60px;"> <span style="font-size:36px; text-align:center; margin-top:10px;"><?php the_title(); ?></span> </div>
             <!--<h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>-->
             <!-- .entry-meta -->
         </header>
@@ -70,6 +69,6 @@
         }
         
         .site-footer {
-            margin-top: 0;
+            margin-top: 0 !important;
         }
     </style>
