@@ -3,9 +3,15 @@
  * @package _tk
  */
 ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header>
-            <h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>
+    <article style="background-color:#fff; border: 1px solid #ededed;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header style="border-bottom: 1px solid #ededed;">
+            <div class="col-xs-2" style="border-right: 1px solid #ededed;">
+                <?php the_date('d', '', ''); ?>
+                    <?php the_date('m, Y', '', ''); ?>
+            </div>
+            <div class="col-xs-10">
+                <h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1> </div>
+            <!--<h1 class="page-title" style="text-align:center; margin-top:10px;"><?php the_title(); ?></h1>-->
             <!-- .entry-meta -->
         </header>
         <!-- .entry-header -->
@@ -58,3 +64,12 @@
         <!-- .entry-meta -->
     </article>
     <!-- #post-## -->
+    <style>
+        .main-content {
+            background-color: #ededed;
+        }
+        
+        .site-footer {
+            margin-top: 0;
+        }
+    </style>
