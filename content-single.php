@@ -5,11 +5,11 @@
 ?>
     <article style="margin-top:20px; margin-bottom:20px;background-color:#fff;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header style="border-bottom: 1px solid #ededed; margin-bottom:20px;">
-            <div style="height:100px; padding:20px; border-bottom:1px solid #ededed;">
+            <div style="padding:20px; border-bottom:1px solid #ededed;">
                 <div style="font-size:28px; text-align:left;">
                     <?php the_title(); ?>
                 </div>
-                <div>
+                <div> Posted on
                     <?php the_date(); ?>
                 </div>
             </div>
@@ -17,7 +17,7 @@
             <!-- .entry-meta -->
         </header>
         <!-- .entry-header -->
-        <div class="entry-content" style="padding:20px 20px 0 20px;">
+        <div class="entry-content" style="padding:0 20px 0 20px;">
             <div class="entry-content-thumbnail">
                 <?php the_post_thumbnail(); ?>
             </div>
@@ -25,7 +25,7 @@
                 <?php _tk_link_pages(); ?>
         </div>
         <!-- .entry-content -->
-        <footer class="entry-meta" style="padding:0 20px 20px 20px;>
+        <footer class="entry-meta" style="padding:0 20px 20px 20px" ;>
             <div class=" entry-meta ">
                 <?php _tk_posted_on(); ?>
             </div>
