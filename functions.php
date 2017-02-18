@@ -485,3 +485,13 @@ function awana_prebuilt_layouts_home($layoutshome){
 
 }
 add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
+
+add_action('admin_menu', 'awana_theme_support');
+ 
+function awana_theme_support(){
+        add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'awana_theme_support', 'awana_theme_support_content' );
+}
+ 
+function awana_theme_support_content(){
+        echo "<h1>Hello World!</h1>";
+}
