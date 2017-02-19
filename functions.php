@@ -493,16 +493,5 @@ function awana_theme_support(){
 }
  
 function awana_theme_support_content(){
-        echo '
-        <style>
-        .wpcontent {
-        padding:20px;
-        }
-        </stlye>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <div class="alert alert-danger" role="alert">
-  This page is still under construction
-</div>
-
-<h3>What you will learn</h3>';
+        echo '<style>.wpcontent{padding:20px;}</stlye><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><div class="alert alert-danger" role="alert">This page is still under construction</div><h3>What you will learn</h3>';
 }
