@@ -486,12 +486,15 @@ function awana_prebuilt_layouts_home($layoutshome){
 }
 add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
 
-add_action('admin_menu', 'awana_theme_support');
- 
-function awana_theme_support(){
-        add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'awana_theme_support', 'awana_theme_support_content' );
+add_action( 'admin_menu', 'my_admin_menu' );
+
+function my_admin_menu() {
+	add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'theme-support.php', 'myplguin_admin_page', 'dashicons-book-alt', 999  );
 }
- 
-function awana_theme_support_content(){
-        echo '<style>.wpcontent{padding:20px;}</stlye><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><div class="alert alert-danger" role="alert">This page is still under construction</div><h3>What you will learn</h3>';
+
+function myplguin_admin_page(){
+	?>
+    <div class="wrap">
+        <h2>Welcome To My Plugin</h2> </div>
+    <?php
 }
