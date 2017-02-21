@@ -495,6 +495,16 @@ function my_admin_menu() {
 function myplguin_admin_page(){
 	?>
     <div class="wrap">
-        <h2>Welcome To My Plugin</h2> </div>
+        <h2>Theme Support</h2>
+        <h4>What will we cover</h4>
+        <ol>
+            <li><a href="#test">test</a></li>
+            <li><a href="#anotherTest">another test</a></li>
+        </ol>
+        <h4 id="test">Test</h4>
+        <p>content of test</p>
+        <h4 id="anotherTest">another test</h4>
+        <p>content of another test</p>
+    </div>
     <?php
 }
