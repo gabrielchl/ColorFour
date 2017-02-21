@@ -489,7 +489,7 @@ add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
 add_action( 'admin_menu', 'my_admin_menu' );
 
 function my_admin_menu() {
-	add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'theme-support.php', 'myplguin_admin_page', 'dashicons-book-alt', 999  );
+	add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'theme-support.php', 'myplguin_admin_page', 'dashicons-book-alt', 5  );
 }
 
 function myplguin_admin_page(){
