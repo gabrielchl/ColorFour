@@ -13,19 +13,23 @@
         }
         
         .bigbtndivone:hover {
-            background-color: #ffa47f !important;
+            background-color: <?php echo $instance['color_one'] ?> !important;
+            color: #fff !important;
         }
         
         .bigbtndivtwo:hover {
-            background-color: #a6ced8 !important;
+            background-color: <?php echo $instance['color_two'] ?> !important;
+            color: #fff !important;
         }
         
         .bigbtndivthree:hover {
-            background-color: #aacea2 !important;
+            background-color: <?php echo $instance['color_three'] ?> !important;
+            color: #fff !important;
         }
         
         .bigbtndivfour:hover {
-            background-color: #f3da74 !important;
+            background-color: <?php echo $instance['color_four'] ?> !important;
+            color: #fff !important;
         }
         
         @media screen and (max-width: 991px) {
@@ -39,25 +43,27 @@
                 margin-bottom: 30px;
             }
         }
+        
+        .all-link-boxes {}
     </style>
-    <div class="col-md-3 col-sm-6 four-link-box-margin-special" style="">
-        <div onclick="location.href='<?php echo $instance['link_one'] ?>';" class="bigbtndiv bigbtndivone hvr-forward" style="background-color: <?php echo $instance['color_one'] ?>; color:#fff; cursor:pointer;">
+    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
+        <div onclick="location.href='<?php echo $instance['link_one'] ?>';" class="bigbtndiv bigbtndivone hvr-forward" style="background-color:#fff ; color:<?php echo $instance['color_one'] ?>; cursor:pointer; border: 4px solid <?php echo $instance['color_one'] ?>">
             <?php echo $instance['text_one'] ?>
-                <br><i class="fa fa-chevron-circle-right bigrightbtn" style="color:#fff;" aria-hidden="true"></i></div>
+        </div>
     </div>
-    <div class="col-md-3 col-sm-6 four-link-box-margin-special" style="">
-        <div onclick="location.href='<?php echo $instance['link_two'] ?>';" class="bigbtndiv bigbtndivtwo hvr-forward" style="background-color: <?php echo $instance['color_two'] ?>; color:#fff; cursor:pointer;">
+    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
+        <div onclick="location.href='<?php echo $instance['link_two'] ?>';" class="bigbtndiv bigbtndivtwo hvr-forward" style="background-color:#fff ; color:<?php echo $instance['color_two'] ?>; cursor:pointer; border: 4px solid <?php echo $instance['color_two'] ?>">
             <?php echo $instance['text_two'] ?>
-                <br><i class="fa fa-chevron-circle-right bigrightbtn" style="color:#fff;" aria-hidden="true"></i></div>
+        </div>
     </div>
-    <div class="col-md-3 col-sm-6 four-link-box-margin-special-two" style="">
-        <div onclick="location.href='<?php echo $instance['link_three'] ?>';" class="bigbtndiv bigbtndivthree hvr-forward" style="background-color: <?php echo $instance['color_three'] ?>; color:#fff; cursor:pointer;">
+    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special-two" style="">
+        <div onclick="location.href='<?php echo $instance['link_three'] ?>';" class="bigbtndiv bigbtndivthree hvr-forward" style="background-color:#fff ; color:<?php echo $instance['color_three'] ?>; cursor:pointer; border: 4px solid <?php echo $instance['color_three'] ?>">
             <?php echo $instance['text_three'] ?>
-                <br><i class="fa fa-chevron-circle-right bigrightbtn" style="color:#fff;" aria-hidden="true"></i></div>
+        </div>
     </div>
-    <div class="col-md-3 col-sm-6" style="margin-bottom:35px;">
-        <div onclick="location.href='<?php echo $instance['link_four'] ?>';" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color: <?php echo $instance['color_four'] ?>; color:#fff; cursor:pointer;">
+    <div class="all-link-boxes col-md-3 col-sm-6" style="margin-bottom:35px;">
+        <div onclick="location.href='<?php echo $instance['link_four'] ?>';" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#fff ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border: 4px solid <?php echo $instance['color_four'] ?>">
             <?php echo $instance['text_four'] ?>
-                <br><i class="fa fa-chevron-circle-right bigrightbtn" style="color:#fff;" aria-hidden="true"></i></div>
+        </div>
     </div>
 </div>
