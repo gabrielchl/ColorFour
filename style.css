@@ -331,8 +331,24 @@ object {
 
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
 
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 
 /* styles for _tk_pagination und _tk_link_pages */
+
+.upon-nav {
+    height: 3px;
+    width: 100%;
+    background-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 nav form.tk-page-nav,
 nav .input-group,
@@ -349,11 +365,7 @@ nav .form-control {
 }
 
 .navbar-special {
-    margin-top: 35px !important;
-    border-top: 4px solid #FE8453;
-    -webkit-border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round !important;
-    -o-border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
-    border-image: url(http://gabriellee.esy.es/awanahkdemo/wp-content/themes/awanahk/border.jpg) 30 round;
+    margin-top: 16px !important;
 }
 
 .navbar-default .navbar-collapse,
@@ -373,10 +385,6 @@ body {
     padding: 10px 10px;
 }
 
-.navbar-toogle {
-    margin-top: 25px;
-}
-
 #pg-2-0,
 #pl-2 .panel-grid-cell .so-panel {
     margin-bottom: 0;
@@ -390,13 +398,21 @@ body {
 }
 
 .navbar-toggle {
-    margin-top: 25px;
+    margin-top: 18px;
 }
 
 .panel-row-style {
     background-position: center;
 }
 
+.navbar-brand {
+    height: 70px;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .navbar-brand>img {
-    max-width: calc(100vw - 140px);
+    max-height: 100%;
+    max-width: 100%;
 }

@@ -48,7 +48,8 @@
                 <!-- .container -->
                 </header>
                 <!-- #masthead -->*/ ?>
-                <nav class="site-navigation" style="min-height: 83px;">
+                <div class="upon-nav"></div>
+                <nav class="site-navigation">
                     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
                         <div class="container" style="padding-bottom:0;">
                             <div class="row">
