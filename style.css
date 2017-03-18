@@ -331,11 +331,13 @@ object {
 
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
 
-.row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+@media screen and (min-width: 902px) {
+    .footer-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 
@@ -407,12 +409,19 @@ body {
 
 .navbar-brand {
     height: 70px;
-    width: 150px;
+    width: 130px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 0;
 }
 
 .navbar-brand>img {
     max-height: 100%;
     max-width: 100%;
+}
+
+@media screen and (max-width: 901px) {
+    #main-menu li a {
+        padding: 10px 6px;
+    }
 }
