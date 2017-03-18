@@ -331,7 +331,7 @@ object {
 
 /* Hey, if you don't need my comments anymore, just delete me! :)  */
 
-@media screen and (min-width: 902px) {
+@media screen and (min-width: 992px) {
     .footer-row {
         display: -webkit-box;
         display: -webkit-flex;
