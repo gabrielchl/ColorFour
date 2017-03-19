@@ -463,3 +463,17 @@ body {
         overflow: hidden!important;
     }
 }
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: #e7e7e7;
+    color: #000;
+}
+
+.dropdown-menu>li>a {
+    color: #777;
+}
+
+.dropdown-menu>.active>a {
+    font-weight: bold;
+}
