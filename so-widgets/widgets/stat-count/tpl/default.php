@@ -14,7 +14,15 @@
         text-align: center;
     }
     
+    .stat_count_num h1 {
+        font-size: 44px;
+    }
+    
     .stat_count_text {
         text-align: center;
+    }
+    
+    .stat_count_text h1 {
+        font-size: 16px;
     }
 </style>
