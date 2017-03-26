@@ -10,5 +10,11 @@
     </div>
 </div>
 <style>
-
+    .stat_count_num {
+        text-align: center;
+    }
+    
+    .stat_count_text {
+        text-align: center;
+    }
 </style>
