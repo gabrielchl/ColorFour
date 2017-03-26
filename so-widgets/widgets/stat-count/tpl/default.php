@@ -22,7 +22,7 @@
         text-align: center;
     }
     
-    .stat_count_text h1 {
+    .stat_count_text {
         font-size: 16px;
     }
 </style>
