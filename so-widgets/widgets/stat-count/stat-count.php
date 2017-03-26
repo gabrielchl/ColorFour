@@ -61,11 +61,3 @@ class Stat_Count extends SiteOrigin_Widget {
 }
 
 siteorigin_widget_register('stat-count', __FILE__, 'Stat_Count');
-
-function stat_count_banner_img_src( $banner_url, $widget_meta ) {
-    if( $widget_meta['ID'] == 'stat-count') {
-        $banner_url = plugin_dir_url(__FILE__) . 'stat_count_banner.png';
-    }
-    return $banner_url;
-}
-add_filter( 'siteorigin_widgets_widget_banner', 'stat_count_banner_img_src', 10, 2);
