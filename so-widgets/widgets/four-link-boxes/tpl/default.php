@@ -66,7 +66,7 @@
         </a>
     </div>
     <div class="all-link-boxes col-md-3 col-sm-6" style="margin-bottom:35px;">
-        <a href="<?php echo $instance['url_four] ?>" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_four'] ?>">
+        <a href="<?php echo $instance['url_four'] ?>" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_four'] ?>">
             <?php echo $instance['text_four'] ?>
         </a>
     </div>
