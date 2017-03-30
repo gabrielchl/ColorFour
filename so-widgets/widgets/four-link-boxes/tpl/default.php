@@ -12,6 +12,10 @@
             margin-right: auto;
         }
         
+        .bigbtndiv:hover {
+            text-decoration: none;
+        }
+        
         .bigbtndivone:hover {
             background-color: <?php echo $instance['color_one'] ?> !important;
             color: #fff !important;
@@ -47,23 +51,23 @@
         .all-link-boxes {}
     </style>
     <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
-        <div onclick="location.href='<?php echo $instance['link_one'] ?>';" class="bigbtndiv bigbtndivone hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_one'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_one'] ?>">
+        <a href="<?php echo $instance['url_one'] ?>" class="bigbtndiv bigbtndivone hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_one'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_one'] ?>">
             <?php echo $instance['text_one'] ?>
-        </div>
+        </a>
     </div>
     <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
-        <div onclick="location.href='<?php echo $instance['link_two'] ?>';" class="bigbtndiv bigbtndivtwo hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_two'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_two'] ?>">
+        <a href="<?php echo $instance['url_two'] ?>" class="bigbtndiv bigbtndivtwo hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_two'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_two'] ?>">
             <?php echo $instance['text_two'] ?>
-        </div>
+        </a>
     </div>
     <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special-two" style="">
-        <div onclick="location.href='<?php echo $instance['link_three'] ?>';" class="bigbtndiv bigbtndivthree hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_three'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_three'] ?>">
+        <a href="<?php echo $instance['url_three'] ?>" class="bigbtndiv bigbtndivthree hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_three'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_three'] ?>">
             <?php echo $instance['text_three'] ?>
-        </div>
+        </a>
     </div>
     <div class="all-link-boxes col-md-3 col-sm-6" style="margin-bottom:35px;">
-        <div onclick="location.href='<?php echo $instance['link_four'] ?>';" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_four'] ?>">
+        <a href="<?php echo $instance['url_four] ?>" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_four'] ?>">
             <?php echo $instance['text_four'] ?>
-        </div>
+        </a>
     </div>
 </div>
