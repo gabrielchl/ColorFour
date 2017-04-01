@@ -409,9 +409,9 @@ body {
 
 .navbar-brand {
     height: 70px;
-    width: 130px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 135px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 0;
 }
 
