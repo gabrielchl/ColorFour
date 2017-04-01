@@ -51,7 +51,7 @@
             </div>
             <div class="" style="background-color:#444;">
                 <div class="" id="getthisheiht" style="padding-bottom:0;">
-                    <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2017 &copy; Awana Hong Kong LTD, Designed by Gabriel Lee</span> </div>
+                    <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2017 &copy; Awana Hong Kong Limited, Designed by Gabriel Lee</span> </div>
                 </div>
             </div>
     </footer>
