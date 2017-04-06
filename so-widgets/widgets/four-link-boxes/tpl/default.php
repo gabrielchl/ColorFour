@@ -50,22 +50,22 @@
         
         .all-link-boxes {}
     </style>
-    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
+    <div class="all-link-boxes col-sm-3 col-xs-6 four-link-box-margin-special" style="">
         <a href="<?php echo $instance['url_one'] ?>" class="bigbtndiv bigbtndivone hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_one'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_one'] ?>">
             <?php echo $instance['text_one'] ?>
         </a>
     </div>
-    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special" style="">
+    <div class="all-link-boxes col-sm-3 col-xs-6 four-link-box-margin-special" style="">
         <a href="<?php echo $instance['url_two'] ?>" class="bigbtndiv bigbtndivtwo hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_two'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_two'] ?>">
             <?php echo $instance['text_two'] ?>
         </a>
     </div>
-    <div class="all-link-boxes col-md-3 col-sm-6 four-link-box-margin-special-two" style="">
+    <div class="all-link-boxes col-sm-3 col-xs-6 four-link-box-margin-special-two" style="">
         <a href="<?php echo $instance['url_three'] ?>" class="bigbtndiv bigbtndivthree hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_three'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_three'] ?>">
             <?php echo $instance['text_three'] ?>
         </a>
     </div>
-    <div class="all-link-boxes col-md-3 col-sm-6" style="margin-bottom:35px;">
+    <div class="all-link-boxes col-sm-3 col-xs-6" style="margin-bottom:35px;">
         <a href="<?php echo $instance['url_four'] ?>" class="bigbtndiv bigbtndivfour hvr-forward" style="background-color:#ededed ; color:<?php echo $instance['color_four'] ?>; cursor:pointer; border-bottom: 4px solid <?php echo $instance['color_four'] ?>">
             <?php echo $instance['text_four'] ?>
         </a>
