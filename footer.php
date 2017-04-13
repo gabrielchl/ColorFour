@@ -22,6 +22,10 @@
                     padding-top: 20px;
                     padding-bottom: 25px;
                 }
+                
+                .footer-row h2 {
+                    font-size: 25px;
+                }
             </style>
             <div class="" style="background-color:#666;">
                 <div class="container" id="getthisheiht">
