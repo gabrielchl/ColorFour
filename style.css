@@ -486,6 +486,6 @@ body {
     min-height: 400px;
 }
 
-.tabs_item p {
+.tabs_item {
     font-weight: 400;
 }
