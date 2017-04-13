@@ -490,8 +490,14 @@ body {
     font-weight: 400;
 }
 
-@media (min-width: 600px) and (max-width:780px) {
+@media (min-width: 600px) {
     .four_to_two .panel-grid-cell {
         width: 50% !important;
+    }
+}
+
+@media (min-width: 781px) {
+    .four_to_two .panel-grid-cell {
+        width: 25% !important;
     }
 }
