@@ -487,3 +487,7 @@ body {
         min-height: 400px;
     }
 }
+
+.tabs-item p {
+    font-weight: 400;
+}
