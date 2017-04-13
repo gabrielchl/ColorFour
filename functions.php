@@ -508,3 +508,12 @@ function myplguin_admin_page(){
     </div>
     <?php
 }
+
+function alertbadge_func( $atts ) {
+	$atts = shortcode_atts( array(
+		'text' => 'Text',
+	), $atts, 'alertbadge' );
+
+	return "<span class="label label-danger">{$atts['text']}</span>";
+}
+add_shortcode( 'alertbadge', 'alertbadge_func' );
