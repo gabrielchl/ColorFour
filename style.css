@@ -499,5 +499,6 @@ body {
 @media (min-width: 781px) {
     .four_to_two .panel-grid-cell {
         width: 25% !important;
+        display: inline-block;
     }
 }
