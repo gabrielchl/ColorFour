@@ -85,7 +85,7 @@ echo $image[0]; ?>">
                         <!-- .container -->
                 </nav>
                 <!-- .site-navigation -->
-                <div class="main-content">
+                <div class="main-content real-main-content">
                     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
                         <div class="container" style="padding-bottom:0;">
                             <div class="row">
