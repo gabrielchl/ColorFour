@@ -26,7 +26,8 @@
             <div class="" style="background-color:#666;">
                 <div class="container" id="getthisheiht">
                     <div class="row footer-row" style="color:#fff;">
-                        <div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;"><img src="http://gabrielcoderity.esy.es/awana/wp-content/uploads/2017/04/awana-color.png" style="padding-bottom: 15px; width: 100%; height: auto; max-width: 200px;" />
+                        <div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;">
+                            <div style="text-align:center;"> <img src="http://gabrielcoderity.esy.es/awana/wp-content/uploads/2017/04/awana-color.png" style="padding-bottom: 15px; width: 100%; height: auto; max-width: 150px;" /> </div>
                             <br>
                             <?php dynamic_sidebar( 'widget_footer_one' ); ?>
                         </div>
