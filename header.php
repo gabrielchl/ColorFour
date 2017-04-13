@@ -91,6 +91,7 @@ echo $image[0]; ?>">
                         text-align: center;
                         position: fixed;
                         bottom: 0;
+                        z-index: 9999;
                     }
                     
                     .alert {
