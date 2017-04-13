@@ -482,12 +482,10 @@ body {
     border-bottom: 2px solid #dbdbdb;
 }
 
-@media screen and (max-width: 901px) {
-    .main-content {
-        min-height: 400px;
-    }
+.main-content {
+    min-height: 400px;
 }
 
-.tabs-item p {
+.tabs_item p {
     font-weight: 400;
 }
