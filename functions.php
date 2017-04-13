@@ -486,29 +486,6 @@ function awana_prebuilt_layouts_home($layoutshome){
 }
 add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
 
-add_action( 'admin_menu', 'my_admin_menu' );
-
-function my_admin_menu() {
-	add_menu_page( 'Theme Support', 'Theme Support', 'manage_options', 'theme-support.php', 'myplguin_admin_page', 'dashicons-book-alt', 999  );
-}
-
-function myplguin_admin_page(){
-	?>
-    <div class="wrap">
-        <h2>Theme Support</h2>
-        <h4>What will we cover</h4>
-        <ol>
-            <li><a href="#test">test</a></li>
-            <li><a href="#anotherTest">another test</a></li>
-        </ol>
-        <h4 id="test">Test</h4>
-        <p>content of test</p>
-        <h4 id="anotherTest">another test</h4>
-        <p>content of another test</p>
-    </div>
-    <?php
-}
-
 function alertbadge_func( $atts ) {
 	$atts = shortcode_atts( array(
 		'text' => 'Text',
