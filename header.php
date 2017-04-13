@@ -89,6 +89,8 @@ echo $image[0]; ?>">
                     .alert-wrap {
                         width: 100%;
                         text-align: center;
+                        position: fixed;
+                        bottom: 0;
                     }
                     
                     .alert {
@@ -98,7 +100,6 @@ echo $image[0]; ?>">
                         opacity: 1;
                         transition: opacity 0.6s;
                         margin-bottom: 15px;
-                        position: fixed;
                         display: inline-block;
                     }
                     
