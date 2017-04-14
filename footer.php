@@ -52,7 +52,6 @@
                         </div>-->
                         <div class="col-sm-3 footer-row-box footer-row-box-one" style="">
                             <h2 style="padding-bottom:15px; margin-bottom:0;">Awana Hong Kong</h2>
-                            <br>
                             <?php dynamic_sidebar( 'widget_footer_one' ); ?>
                         </div>
                         <div class="col-sm-3 footer-row-box footer-row-box-two" style="">
@@ -91,6 +90,10 @@
                             
                             .footer-row-box ul li {
                                 list-style-type: none;
+                            }
+                            
+                            .footer-row-box ul li a {
+                                color: #eee;
                             }
                         </style>
                     </div>
