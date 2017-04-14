@@ -30,7 +30,7 @@
             <div class="" style="background-color:#666;">
                 <div class="container" id="getthisheiht">
                     <div class="row footer-row" style="color:#fff;">
-                        <div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;">
+                        <!--<div class="col-md-3 footerfourbox" style="background-color: #FE8453; border-bottom: #ad5836 10px solid;">
                             <div style="text-align:center;"> <img src="http://gabrielcoderity.esy.es/awana/wp-content/uploads/2017/04/awana-color.png" style="padding-bottom: 15px; width: 100%; height: auto; max-width: 150px;" /> </div>
                             <br>
                             <?php dynamic_sidebar( 'widget_footer_one' ); ?>
@@ -49,7 +49,38 @@
                                 }
                             </style>
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
+                        </div>-->
+                        <div class="col-sm-3 footer-row-box footer-row-box-one" style="">
+                            <h2>Awana Hong Kong</h2>
+                            <br>
+                            <?php dynamic_sidebar( 'widget_footer_one' ); ?>
                         </div>
+                        <div class="col-sm-3 footer-row-box footer-row-box-two" style="">
+                            <?php dynamic_sidebar( 'widget_footer_two' ); ?>
+                        </div>
+                        <div class="col-sm-3 footer-row-box footer-row-box-three" style="">
+                            <?php dynamic_sidebar( 'widget_footer_three' ); ?>
+                        </div>
+                        <div class="col-sm-3 footer-row-box footer-row-box-four" style="">
+                            <?php dynamic_sidebar( 'widget_footer_four' ); ?>
+                        </div>
+                        <style>
+                            .footer-row-box-one h2 {
+                                color: #FE8453;
+                            }
+                            
+                            .footer-row-box-two h2 {
+                                color: #80C3D3;
+                            }
+                            
+                            .footer-row-box-three h2 {
+                                color: #88C87A;
+                            }
+                            
+                            .footer-row-box-four h2 {
+                                color: #F1CD3B;
+                            }
+                        </style>
                     </div>
                 </div>
             </div>
