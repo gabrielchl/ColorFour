@@ -51,7 +51,7 @@
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
                         </div>-->
                         <div class="col-sm-3 footer-row-box footer-row-box-one" style="">
-                            <h2>Awana Hong Kong</h2>
+                            <h2 style="padding-bottom:15px; margin-bottom:0;">Awana Hong Kong</h2>
                             <br>
                             <?php dynamic_sidebar( 'widget_footer_one' ); ?>
                         </div>
@@ -65,6 +65,10 @@
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
                         </div>
                         <style>
+                            .footer-row-box h2 {
+                                font-weight: bold;
+                            }
+                            
                             .footer-row-box-one h2 {
                                 color: #FE8453;
                             }
@@ -79,6 +83,14 @@
                             
                             .footer-row-box-four h2 {
                                 color: #F1CD3B;
+                            }
+                            
+                            .footer-row-box ul {
+                                padding-left: 0;
+                            }
+                            
+                            .footer-row-box ul li {
+                                list-style-type: none;
                             }
                         </style>
                     </div>
