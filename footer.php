@@ -104,6 +104,89 @@
                     <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2017 &copy; Awana Hong Kong Limited, Designed by Gabriel Lee</span> </div>
                 </div>
             </div>
+            <script>
+                $(document).ready(function () {
+                    // Add smooth scrolling to all links
+                    $("a").on('click', function (event) {
+                        // Make sure this.hash has a value before overriding default behavior
+                        if (this.hash !== "") {
+                            // Prevent default anchor click behavior
+                            event.preventDefault();
+                            // Store hash
+                            var hash = this.hash;
+                            var gogogoup = $(hash).offset().top - 30;
+                            // Using jQuery's animate() method to add smooth page scroll
+                            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                            $('html, body').animate({
+                                scrollTop: gogogoup
+                            }, 800, function () {
+                                // Add hash (#) to URL when done scrolling (default click behavior)
+                                window.location.hash = hash;
+                            });
+                        } // End if
+                    });
+                });
+            </script> <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+            <style>
+                #return-to-top {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: rgb(83, 121, 208);
+                    background: rgba(83, 121, 208, 0.7);
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    text-decoration: none;
+                    -webkit-border-radius: 35px;
+                    -moz-border-radius: 35px;
+                    border-radius: 4px;
+                    display: none;
+                    -webkit-transition: all 0.3s linear;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                }
+                
+                #return-to-top i {
+                    color: #fff;
+                    margin: 0;
+                    position: relative;
+                    left: 16px;
+                    top: 13px;
+                    font-size: 19px;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                }
+                
+                #return-to-top:hover {
+                    background: rgba(83, 121, 208, 0.9);
+                }
+                
+                #return-to-top:hover i {
+                    color: #fff;
+                    top: 10px;
+                }
+            </style>
+            <script>
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() >= 600) {
+                        $('#return-to-top').fadeIn(400);
+                    }
+                    else {
+                        $('#return-to-top').fadeOut(400);
+                    }
+                });
+                $('#return-to-top').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                });
+            </script>
     </footer>
     <!-- close #colophon -->
     <?php wp_footer(); ?>
