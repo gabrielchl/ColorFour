@@ -103,32 +103,10 @@
                 <div class="" id="getthisheiht" style="padding-bottom:0;">
                     <div class="container" style="padding-bottom:20px; padding-top:20px;"> <span style="color:#ccc;">2017 &copy; Awana Hong Kong Limited, Designed by Gabriel Lee</span> </div>
                 </div>
-            </div>
-            <script>
-                $(document).ready(function () {
-                    // Add smooth scrolling to all links
-                    $("a").on('click', function (event) {
-                        // Make sure this.hash has a value before overriding default behavior
-                        if (this.hash !== "") {
-                            // Prevent default anchor click behavior
-                            event.preventDefault();
-                            // Store hash
-                            var hash = this.hash;
-                            var gogogoup = $(hash).offset().top - 30;
-                            // Using jQuery's animate() method to add smooth page scroll
-                            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                            $('html, body').animate({
-                                scrollTop: gogogoup
-                            }, 800, function () {
-                                // Add hash (#) to URL when done scrolling (default click behavior)
-                                window.location.hash = hash;
-                            });
-                        } // End if
-                    });
-                });
-            </script> <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+            </div> <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
             <style>
                 #return-to-top {
+                    z-index: 99999;
                     position: fixed;
                     bottom: 20px;
                     right: 20px;
@@ -174,16 +152,16 @@
             </style>
             <script>
                 $(window).scroll(function () {
-                    if ($(this).scrollTop() >= 600) {
-                        $('#return-to-top').fadeIn(400);
+                    if ($(this).scrollTop() >= 400) { // If page is scrolled more than 50px
+                        $('#return-to-top').fadeIn(300); // Fade in the arrow
                     }
                     else {
-                        $('#return-to-top').fadeOut(400);
+                        $('#return-to-top').fadeOut(300); // Else fade out the arrow
                     }
                 });
-                $('#return-to-top').click(function () {
+                $('#return-to-top').click(function () { // When arrow is clicked
                     $('body,html').animate({
-                        scrollTop: 0
+                        scrollTop: 0 // Scroll to top of body
                     }, 500);
                 });
             </script>
