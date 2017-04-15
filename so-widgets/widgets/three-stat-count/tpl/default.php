@@ -15,7 +15,8 @@
     }
     
     .stat_count_num h1 {
-        font-size: 44px;
+        font-size: 36px;
+        font-weight: 400;
     }
     
     .stat_count_text {
