@@ -171,6 +171,16 @@
                     }, 500);
                 });
             </script>
+            <script>
+                $(document).ready(function () {
+                    var maxHeight = 0;
+                    $(".sameHeight").each(function () {
+                        if ($(this).outerHeight() > maxHeight) {
+                            maxHeight = $(this).outerHeight();
+                        }
+                    }).height(maxHeight);
+                });
+            </script>
     </footer>
     <!-- close #colophon -->
     <?php wp_footer(); ?>
