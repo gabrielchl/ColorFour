@@ -88,7 +88,7 @@ echo $image[0]; ?>">
                 <!-- .site-navigation -->
                 <style>
                     .alert-wrap {
-                        width: 100%;
+                        width: 80%;
                         text-align: center;
                         position: fixed;
                         bottom: 0;

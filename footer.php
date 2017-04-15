@@ -64,12 +64,6 @@
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
                         </div>
                         <style>
-                            @media (min-width: 535px) and (max-width:767px) {
-                                .footer-row-box {
-                                    width: 50%;
-                                }
-                            }
-                            
                             .footer-row-box h2 {
                                 font-weight: bold;
                             }
@@ -168,24 +162,6 @@
                     $('body,html').animate({
                         scrollTop: 0 // Scroll to top of body
                     }, 500);
-                });
-            </script>
-            <script>
-                $(document).ready(function () {
-                    // Select and loop the container element of the elements you want to equalise
-                    $('.four_to_two').each(function () {
-                        // Cache the highest
-                        var highestBox = 0;
-                        // Select and loop the elements you want to equalise
-                        $('.four-link-box', this).each(function () {
-                            // If this box is higher than the cached highest then store it
-                            if ($(this).height() > highestBox) {
-                                highestBox = $(this).height();
-                            }
-                        });
-                        // Set the height of all those children to whichever was highest 
-                        $('.four-link-box', this).height(highestBox);
-                    });
                 });
             </script>
     </footer>
