@@ -116,8 +116,7 @@
                     position: fixed;
                     bottom: 20px;
                     right: 20px;
-                    background: rgb(83, 121, 208);
-                    background: rgba(83, 121, 208, 0.7);
+                    background: #F1CD3B;
                     width: 50px;
                     height: 50px;
                     display: block;
@@ -148,7 +147,7 @@
                 }
                 
                 #return-to-top:hover {
-                    background: rgba(83, 121, 208, 0.9);
+                    background: #F1CD3B;
                 }
                 
                 #return-to-top:hover i {
