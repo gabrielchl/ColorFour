@@ -172,14 +172,9 @@
                 });
             </script>
             <script>
-                $(document).ready(function () {
-                    var maxHeight = 0;
-                    $(".sameHeight").each(function () {
-                        if ($(this).outerHeight() > maxHeight) {
-                            maxHeight = $(this).outerHeight();
-                        }
-                    }).height(maxHeight);
-                });
+                var maxHeight = Math.max.apply(null, $("div.sameHeight").map(function () {
+                    return $(this).height();
+                }).get());
             </script>
     </footer>
     <!-- close #colophon -->
