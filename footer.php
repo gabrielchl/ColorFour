@@ -64,6 +64,12 @@
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
                         </div>
                         <style>
+                            @media (max-width: 767px) {
+                                .footer-row-box-four h2 {
+                                    padding-top: 310px;
+                                }
+                            }
+                            
                             .footer-row-box h2 {
                                 font-weight: bold;
                             }
