@@ -64,6 +64,12 @@
                             <?php dynamic_sidebar( 'widget_footer_four' ); ?>
                         </div>
                         <style>
+                            @media (min-width: 535px) and (max-width:767px) {
+                                .footer-row-box {
+                                    width: 50%;
+                                }
+                            }
+                            
                             .footer-row-box h2 {
                                 font-weight: bold;
                             }
