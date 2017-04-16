@@ -49,8 +49,31 @@
                 </header>
                 <!-- #masthead -->*/ ?>
                 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-                <div class="upon-nav"></div>
-                <nav class="site-navigation">
+                <div class="container" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
+                    <div class="pull-right"><a href="#" style="
+    font-weight: bold;
+    color: #000;
+    /* background-color: #FE8453; */
+    padding: 9px 20px;
+    /* margin-top: 112px; */
+    display: inline-block;
+">資源</a><a href="#" style="
+    font-weight: bold;
+    color: #000;
+    /* background-color: #FE8453; */
+    padding: 9px 20px;
+    /* margin-top: 112px; */
+    display: inline-block;
+">登出</a><a href="#" style="
+    color: #fff;
+    background-color: #FE8453;
+    padding: 9px 20px;
+    /* margin-top: 112px; */
+    display: inline-block;
+    font-weight: bold;
+">奉獻</a> </div>
+                </div>
+                <nav class="site-navigation" style="border-top: 1px solid #ccc;">
                     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
                         <div class="container" style="padding-bottom:0;">
                             <div class="row">

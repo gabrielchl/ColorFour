@@ -15,7 +15,8 @@
     <!-- close .container -->
     </div>
     <!-- close .main-content -->
-    <footer id="colophon" class="site-footer main-content" role="contentinfo" style="<?php if (is_front_page()) {echo '';} else {echo 'margin-top:30px'; } ?>">
+    <div class="upon-nav" style="<?php if (is_front_page()) {echo '';} else {echo 'margin-top:30px'; } ?>"></div>
+    <footer id="colophon" class="site-footer main-content" role="contentinfo">
         <?php // substitute the class "container-fluid" below if you want a wider content area ?>
             <style>
                 .footerfourbox {
