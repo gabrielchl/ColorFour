@@ -57,8 +57,7 @@
                             width: 32px;
                             height: 32px;
                             background-color: #fff;
-                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-                            border: 1px solid #ccc;
+                            margin-bottom: 0;
                         }
                         
                         .search-form .form-group input.form-control {
@@ -89,7 +88,15 @@
                         
                         .search-form .form-group:hover,
                         .search-form .form-group.hover {
-                            width: 100%;
+                            width: 240px;
+                        }
+                        
+                        @media (max-width: 550px) {
+                            .search-form .form-group:hover,
+                            .search-form .form-group.hover {
+                                width: 80%;
+                                width: calc(100% - 210px);
+                            }
                         }
                         
                         .search-form .form-group span.form-control-feedback {
