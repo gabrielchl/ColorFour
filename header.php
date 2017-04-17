@@ -50,7 +50,8 @@
                 <!-- #masthead -->*/ ?>
                 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
                 <div class="container topmostbar" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
-                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/">奉獻</a> </div>
+                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="
+    background-color: #FE8453;">奉獻</a> </div>
                 </div>
                 <style>
                     .topmostbar a {
@@ -106,7 +107,7 @@ echo $image[0]; ?>">
                     
                     .alert {
                         padding: 20px;
-                        background-color: #f44336;
+                        background-color: #FE8453;
                         color: white;
                         opacity: 1;
                         transition: opacity 0.6s;
