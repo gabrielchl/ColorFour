@@ -50,6 +50,70 @@
                 <!-- #masthead -->*/ ?>
                 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
                 <div class="container topmostbar" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
+                    <style>
+                        .search-form .form-group {
+                            float: right !important;
+                            transition: all 0.35s, border-radius 0s;
+                            width: 32px;
+                            height: 32px;
+                            background-color: #fff;
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+                            border: 1px solid #ccc;
+                        }
+                        
+                        .search-form .form-group input.form-control {
+                            padding-right: 20px;
+                            border: 0 none;
+                            background: transparent;
+                            box-shadow: none;
+                            display: block;
+                        }
+                        
+                        .search-form .form-group input.form-control::-webkit-input-placeholder {
+                            display: none;
+                        }
+                        
+                        .search-form .form-group input.form-control:-moz-placeholder {
+                            /* Firefox 18- */
+                            display: none;
+                        }
+                        
+                        .search-form .form-group input.form-control::-moz-placeholder {
+                            /* Firefox 19+ */
+                            display: none;
+                        }
+                        
+                        .search-form .form-group input.form-control:-ms-input-placeholder {
+                            display: none;
+                        }
+                        
+                        .search-form .form-group:hover,
+                        .search-form .form-group.hover {
+                            width: 100%;
+                        }
+                        
+                        .search-form .form-group span.form-control-feedback {
+                            position: absolute;
+                            top: -1px;
+                            right: -2px;
+                            z-index: 2;
+                            display: block;
+                            width: 34px;
+                            height: 34px;
+                            line-height: 34px;
+                            text-align: center;
+                            color: #3596e0;
+                            left: initial;
+                            font-size: 14px;
+                        }
+                    </style>
+                    <div class="col-md-4 col-md-offset-3">
+                        <form action="" class="search-form">
+                            <div class="form-group has-feedback">
+                                <label for="search" class="sr-only">Search</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="search"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
+                        </form>
+                    </div>
                     <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff;">奉獻</a> </div>
                 </div>
                 <style>
