@@ -49,30 +49,16 @@
                 </header>
                 <!-- #masthead -->*/ ?>
                 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-                <div class="container" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
-                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin" style="
-    font-weight: bold;
-    color: #000;
-    /* background-color: #FE8453; */
-    padding: 9px 20px;
-    /* margin-top: 112px; */
-    display: inline-block;
-">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/" style="
-    font-weight: bold;
-    color: #000;
-    /* background-color: #FE8453; */
-    padding: 9px 20px;
-    /* margin-top: 112px; */
-    display: inline-block;
-">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="
-    color: #fff;
-    background-color: #FE8453;
-    padding: 9px 20px;
-    /* margin-top: 112px; */
-    display: inline-block;
-    font-weight: bold;
-">奉獻</a> </div>
+                <div class="container topmostbar" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
+                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/">奉獻</a> </div>
                 </div>
+                <style>
+                    .topmostbar a {
+                        color: #333;
+                        padding: 9px 20px;
+                        display: inline-block;
+                    }
+                </style>
                 <nav class="site-navigation" style="border-top: 1px solid #ccc;">
                     <?php // substitute the class "container-fluid" below if you want a wider content area ?>
                         <div class="container" style="padding-bottom:0;">
