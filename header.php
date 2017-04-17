@@ -107,11 +107,13 @@
                             font-size: 14px;
                         }
                     </style>
-                    <div class="col-md-4 col-md-offset-3">
+                    <div>
                         <form action="" class="search-form">
-                            <div class="form-group has-feedback">
+                            <div class="form-group has-feedback" style="
+    margin-top: 3px;
+">
                                 <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="search"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="search" autocomplete="off"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
                         </form>
                     </div>
                     <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff;">奉獻</a> </div>
