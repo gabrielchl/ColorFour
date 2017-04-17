@@ -23,7 +23,7 @@ get_header(); ?>
                             $printfourofour = 'Oh No!!!';
                             break;
                         case 4:
-                            $printfourofour = 'What have you done?';
+                            $printfourofour = '404';
                             break;
                         case 5:
                             $printfourofour = 'Oops';
@@ -32,12 +32,12 @@ get_header(); ?>
                             $printfourofour = 'We\'re sorry';
                             break;
                         case 7:
-                            $printfourofour = 'How come!';
+                            $printfourofour = 'Error 404';
                             break;
                     }
                     ?>
                         <h1 style="font-weight: bold; font-size:70px;"><?php echo $printfourofour; ?></h1>
-                        <p style="font-weight: 500;">The page you've been looking for has gone... :'(
+                        <p style="font-weight: 500;">The page you've been looking for isn't here or has been moved... :'(
                             <br>Maybe you would like to <a href="#" onclick="goBack()">get back?</a></p>
                 </div>
             </div>

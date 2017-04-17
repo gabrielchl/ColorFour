@@ -123,12 +123,12 @@
                                 <input type="text" class="form-control" name="search" id="search" placeholder="search" autocomplete="off"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
                         </form>
                     </div>
-                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff;">奉獻</a> </div>
+                    <div class="pull-right"><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 5px; padding: 9px 20px;">奉獻</a> </div>
                 </div>
                 <style>
                     .topmostbar a {
                         color: #333;
-                        padding: 9px 20px;
+                        padding: 9px 12px;
                         display: inline-block;
                         text-decoration: none;
                     }
