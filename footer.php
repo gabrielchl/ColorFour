@@ -171,6 +171,11 @@
                     }, 500);
                 });
             </script>
+            <script>
+                $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
     </footer>
     <!-- close #colophon -->
     <?php wp_footer(); ?>
