@@ -52,7 +52,7 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
                 <div class="container topmostbar" style="padding-bottom: 0;/* border-bottom: 1px solid #ccc; */">
                     <style>
-                        .search-form .form-group {
+                        .header-search-form .header-form-group {
                             float: right !important;
                             transition: all 0.35s, border-radius 0s;
                             width: 32px;
@@ -61,7 +61,7 @@
                             margin-bottom: 0;
                         }
                         
-                        .search-form .form-group input.form-control {
+                        .header-earch-form .header-form-group input.header-form-control {
                             padding-right: 20px;
                             border: 0 none;
                             background: transparent;
@@ -69,38 +69,38 @@
                             display: block;
                         }
                         
-                        .search-form .form-group input.form-control::-webkit-input-placeholder {
+                        .header-search-form .header-form-group input.header-form-control::-webkit-input-placeholder {
                             display: none;
                         }
                         
-                        .search-form .form-group input.form-control:-moz-placeholder {
+                        .header-search-form .header-form-group input.header-form-control:-moz-placeholder {
                             /* Firefox 18- */
                             display: none;
                         }
                         
-                        .search-form .form-group input.form-control::-moz-placeholder {
+                        .header-search-form .header-form-group input.header-form-control::-moz-placeholder {
                             /* Firefox 19+ */
                             display: none;
                         }
                         
-                        .search-form .form-group input.form-control:-ms-input-placeholder {
+                        .header-search-form .header-form-group input.header-form-control:-ms-input-placeholder {
                             display: none;
                         }
                         
-                        .search-form .form-group:hover,
-                        .search-form .form-group.hover {
+                        .header-search-form .header-form-group:hover,
+                        .header-search-form .header-form-group.hover {
                             width: 240px;
                         }
                         
                         @media (max-width: 550px) {
-                            .search-form .form-group:hover,
-                            .search-form .form-group.hover {
+                            .header-search-form .header-form-group:hover,
+                            .header-search-form .header-form-group.hover {
                                 width: 80%;
                                 width: calc(100% - 210px);
                             }
                         }
                         
-                        .search-form .form-group span.form-control-feedback {
+                        .header-search-form .header-form-group span.header-form-control-feedback {
                             position: absolute;
                             top: -1px;
                             right: -2px;
@@ -116,12 +116,12 @@
                         }
                     </style>
                     <div>
-                        <form action="" class="search-form">
-                            <div class="form-group has-feedback" style="
+                        <form action="" class="header-search-form">
+                            <div class="header-form-group header-has-feedback" style="
     margin-top: 3px;
 ">
                                 <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="search" autocomplete="off"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
+                                <input type="text" class="header-form-control" name="search" id="search" placeholder="search" autocomplete="off"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
                         </form>
                     </div>
                     <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">繁 / Eng</a><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 5px; padding: 9px 20px;">奉獻</a> </div>
