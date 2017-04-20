@@ -121,10 +121,10 @@
     margin-top: 3px;
 ">
                                 <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control header-form-control" name="search" id="search" autocomplete="off" style="padding-right:12px;"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
+                                <input type="text" placeholder="search" class="form-control header-form-control" name="search" id="search" autocomplete="off" style="padding-right:12px;"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
                         </form>
                     </div>
-                    <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">Eng</a><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 15px; padding: 9px 20px;">奉獻</a> </div>
+                    <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">Eng</a><a href="http://gabrielcoderity.esy.es/awana/wp-admin">登入</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://gabrielcoderity.esy.es/awana/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
                 </div>
                 <style>
                     .topmostbar a {
