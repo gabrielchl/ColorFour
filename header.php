@@ -14,9 +14,9 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!--<title>
+        <title>
             <?php wp_title( '|', true, 'right' ); ?>
-        </title>-->
+        </title>
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
@@ -178,47 +178,6 @@ echo $image[0]; ?>">
                         <!-- .container -->
                 </nav>
                 <!-- .site-navigation -->
-                <style>
-                    .alert-wrap {
-                        width: 100%;
-                        text-align: center;
-                        position: fixed;
-                        bottom: 0;
-                        z-index: 9999;
-                    }
-                    
-                    .alert {
-                        padding: 20px;
-                        background-color: #FE8453;
-                        color: white;
-                        opacity: 1;
-                        transition: opacity 0.6s;
-                        margin-bottom: 15px;
-                        display: inline-block;
-                    }
-                    
-                    .alert.warning {
-                        background-color: #ff9800;
-                    }
-                    
-                    .closebtn {
-                        margin-left: 15px;
-                        color: white;
-                        font-weight: bold;
-                        float: right;
-                        font-size: 22px;
-                        line-height: 20px;
-                        cursor: pointer;
-                        transition: 0.3s;
-                    }
-                    
-                    .closebtn:hover {
-                        color: black;
-                    }
-                </style>
-                <!--<div class="alert-wrap">
-                    <div class="alert warning"> <span class="closebtn">x</span>新系統正在測試階段，如有任何疑問，請聯絡 systemdev@awana.hk。 </div>
-                </div>-->
                 <script>
                     var close = document.getElementsByClassName("closebtn");
                     var i;
