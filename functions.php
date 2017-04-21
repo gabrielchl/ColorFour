@@ -167,61 +167,6 @@ function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 
-
-require_once get_template_directory() . '/TGM-Plugin-Activation/class-tgm-plugin-activation.php';
-
-add_action( 'tgmpa_register', 'WP_Theme_for_AwanaHK_register_required_plugins' );
-
-function WP_Theme_for_AwanaHK_register_required_plugins() {
-	$plugins = array(
-		array(
-			'name'      => 'Page Builder by SiteOrigin',
-			'slug'      => 'siteorigin-panels',
-			'required'  => true,
-		),
-        array(
-			'name'      => 'SiteOrigin Widgets Bundle',
-			'slug'      => 'so-widgets-bundle',
-			'required'  => true,
-		),
-        array(
-			'name'      => 'Polylang',
-			'slug'      => 'polylang',
-			'required'  => true,
-		),
-        array(
-			'name'      => 'WP Google Maps',
-			'slug'      => 'wp-google-maps',
-			'required'  => true,
-		),
-        array(
-			'name'      => 'Ultimate Addons for SiteOrigin',
-			'slug'      => 'addon-so-widgets-bundle',
-			'required'  => true,
-		),
-        array(
-			'name'      => 'The Events Calendar',
-			'slug'      => 'the-events-calendar',
-			'required'  => true,
-		),
-	);
-	
-	$config = array(
-		'id'           => 'WP-Theme-for-AwanaHK',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
-		'parent_slug'  => 'themes.php',            // Parent menu slug.
-		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-		'has_notices'  => true,                    // Show admin notices or not.
-		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-		'message'      => '',                      // Message to output right before the plugins table.
-
-	);
-	tgmpa( $plugins, $config );
-}
-
 function add_awana_so_widgets($folders){
     $folders[] = get_stylesheet_directory() . '/so-widgets/widgets/';
     return $folders;
@@ -485,12 +430,3 @@ function awana_prebuilt_layouts_home($layoutshome){
 
 }
 add_filter('siteorigin_panels_prebuilt_layouts','awana_prebuilt_layouts_home');
-
-function alertbadge_func( $atts ) {
-	$atts = shortcode_atts( array(
-		'text' => 'Text',
-	), $atts, 'alertbadge' );
-
-	return "<span class='label label-danger'>{$atts['text']}</span>";
-}
-add_shortcode( 'alertbadge', 'alertbadge_func' );
