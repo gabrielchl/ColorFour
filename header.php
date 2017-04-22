@@ -132,7 +132,12 @@
                                 <input type="text" placeholder="search" class="form-control header-form-control" name="search" id="search" autocomplete="off" style="padding-right:12px; border:none; box-shadow: none;"> <span class="glyphicon glyphicon-search form-control-feedback"></span> </div>
                         </form>
                     </div>
-                    <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">Eng</a><a href="http://www.awana.org.hk/wp-admin">登入</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
+                    <?php if(pll_current_language(slug)=zh) { ?>
+                        <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">Eng</a><a href="http://www.awana.org.hk/wp-admin">登入</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
+                        <?php } else { ?>
+                            <div class="pull-right">
+                                <?php pll_the_languages(array('show_flags'=>1)); ?><a href="http://www.awana.org.hk/wp-admin">登入</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
+                            <?php } ?>
                 </div>
                 <style>
                     .topmostbar a {
