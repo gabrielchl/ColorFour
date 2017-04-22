@@ -136,7 +136,7 @@
                         <div class="pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon!">Eng</a><a href="http://www.awana.org.hk/wp-admin">登入</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
                         <?php } else { ?>
                             <style>
-                                li .lang-item {
+                                .lang-item {
                                     list-style: none;
                                     width: initial;
                                     display: inline-block;
