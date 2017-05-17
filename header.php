@@ -143,7 +143,7 @@
                                 }
                             </style>
                             <div class="pull-right">
-                                <?php pll_the_languages(array('show_flags'=>1, 'hide_current'=>1)); ?><a href="http://www.awana.org.hk/wp-admin">登入</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
+                                <?php pll_the_languages(array('show_flags'=>1, 'hide_current'=>1)); ?><a href="http://www.awana.org.hk/wp-admin">Login</a><a href="http://www.awana.org.hk/zh/%E8%B3%87%E6%BA%90/">資源</a><a href="http://www.awana.org.hk/zh/%E5%A5%89%E7%8D%BB/" style="background-color: #FE8453; color:#fff; margin-left:12px; margin-right: 2px; padding: 9px 20px;">奉獻</a> </div>
                             <?php } ?>
                 </div>
                 <style>
