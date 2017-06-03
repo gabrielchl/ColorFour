@@ -1,10 +1,17 @@
-## Welcome to GitHub Pages
+## AwanaHK for Awana Hong Kong
 
-You can use the [editor on GitHub](https://github.com/Gabrielchihonglee/WP-Theme-for-AwanaHK/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+AwanaHK is a WordPress theme created for Awana Hong Kong. You can have a look at the live version at [Awana Hong Kong's Website](awana.org.hk).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Framework or plugin used
+- Bootstrap
+- jQuery
+- Font Awesome
 
-### Markdown
+## License
+
+This theme is licensed under the [MIT license](https://github.com/Gabrielchihonglee/AwanaHK/blob/master/LICENSE). Please feel free to distribute, modify for any private or commercial use. However, you should include license and copyright notice with your software while using it.
+
+## Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -28,10 +35,6 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Support or Contact
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Gabrielchihonglee/WP-Theme-for-AwanaHK/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble using this theme? [contact me](mailto:chihonglee777@gmail.com) and I’ll help you sort it out.
